@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5a6ea1bac72e4b8797af30cbb76f231e" Name="Diagram1">
+        <EntityTypeShape EntityType="profgamessModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="profgamessModel.Viktorina" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="profgamessModel.Voprosi_History_of_the_IT_sphere" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="profgamessModel.Voprosi_IT" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="profgamessModel.Voprosi_People_in_Programming" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <AssociationConnector Association="profgamessModel.FK_Viktorina_Voprosi_History_of_the_IT_sphere" ManuallyRouted="false" />
+        <AssociationConnector Association="profgamessModel.FK_Viktorina_Voprosi_IT" ManuallyRouted="false" />
+        <AssociationConnector Association="profgamessModel.FK_Viktorina_Voprosi_People_in_Programming" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

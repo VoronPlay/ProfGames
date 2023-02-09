@@ -29,5 +29,80 @@ namespace ProfGames
         {
             Manager.MainFrame.GoBack();
         }
+
+        private void Vopros_1_Voprosi_IT_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new PageSVoprosami.Page5());
+        }
+
+        private void Vopros_2_Voprosi_IT_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new PageSVoprosami.Page4());
+        }
+
+        private void Vopros_4_Voprosi_IT_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new PageSVoprosami.Page2());
+        }
+
+        private void Vopros_5_Voprosi_IT_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new PageSVoprosami.Page14());
+        }
+
+        private void Vopros_3_Voprosi_IT_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new PageSVoprosami.Page3());
+        }
+
+        private void Vopros_1_Voprosi_People_in_Programming_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new PageSVoprosami.Page13());
+        }
+
+        private void Vopros_2_Voprosi_People_in_Programming_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new PageSVoprosami.Page12());
+        }
+
+        private void Vopros_3_Voprosi_People_in_Programming_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new PageSVoprosami.Page11());
+        }
+
+        private void Vopros_4_Voprosi_People_in_Programming_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new PageSVoprosami.Page10());
+        }
+
+        private void Vopros_5_Voprosi_People_in_Programming_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new PageSVoprosami.Page1());
+        }
+
+        private void Vopros_1_History_of_the_IT_sphere_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new PageSVoprosami.Vopros_1_History_of_the_IT_sphere());
+        }
+
+        private void Vopros_2_History_of_the_IT_sphere_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new PageSVoprosami.Page9());
+        }
+
+        private void Vopros_3_History_of_the_IT_sphere_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new PageSVoprosami.Page8());
+        }
+
+        private void Vopros_4_History_of_the_IT_sphere_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new PageSVoprosami.Page7());
+        }
+
+        private void Vopros_5_History_of_the_IT_sphere_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new PageSVoprosami.Page6());
+        }
     }
 }

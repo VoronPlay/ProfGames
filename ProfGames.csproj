@@ -35,8 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,6 +64,82 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ApplicationData\AppConnect.cs" />
+    <Compile Include="ApplicationData\ModelProfGames.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelProfGames.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\ModelProfGames.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelProfGames.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\ModelProfGames.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelProfGames.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\sysdiagrams.cs">
+      <DependentUpon>ModelProfGames.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\Viktorina.cs">
+      <DependentUpon>ModelProfGames.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\Voprosi_History_of_the_IT_sphere.cs">
+      <DependentUpon>ModelProfGames.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\Voprosi_IT.cs">
+      <DependentUpon>ModelProfGames.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\Voprosi_People_in_Programming.cs">
+      <DependentUpon>ModelProfGames.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami\Vopros_5_Voprosi_People_in_Programming.xaml.cs">
+      <DependentUpon>Vopros_5_Voprosi_People_in_Programming.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami\Vopros_4_Voprosi_People_in_Programming.xaml.cs">
+      <DependentUpon>Vopros_4_Voprosi_People_in_Programming.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami\Vopros_3_Voprosi_People_in_Programming.xaml.cs">
+      <DependentUpon>Vopros_3_Voprosi_People_in_Programming.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami\Vopros_2_Voprosi_People_in_Programming.xaml.cs">
+      <DependentUpon>Vopros_2_Voprosi_People_in_Programming.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami\Vopros_1_Voprosi_People_in_Programming.xaml.cs">
+      <DependentUpon>Vopros_1_Voprosi_People_in_Programming.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami\Vopros_5_Voprosi_IT.xaml.cs">
+      <DependentUpon>Vopros_5_Voprosi_IT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami\Vopros_4_Voprosi_IT.xaml.cs">
+      <DependentUpon>Vopros_4_Voprosi_IT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami\Vopros_3_Voprosi_IT.xaml.cs">
+      <DependentUpon>Vopros_3_Voprosi_IT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami\Vopros_2_Voprosi_IT.xaml.cs">
+      <DependentUpon>Vopros_2_Voprosi_IT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami\Vopros_1_Voprosi_IT.xaml.cs">
+      <DependentUpon>Vopros_1_Voprosi_IT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami\Vopros_5_History_of_the_IT_sphere.xaml.cs">
+      <DependentUpon>Vopros_5_History_of_the_IT_sphere.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami\Vopros_4_History_of_the_IT_sphere.xaml.cs">
+      <DependentUpon>Vopros_4_History_of_the_IT_sphere.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami\Vopros_3_History_of_the_IT_sphere.xaml.cs">
+      <DependentUpon>Vopros_3_History_of_the_IT_sphere.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami\Vopros_2_History_of_the_IT_sphere.xaml.cs">
+      <DependentUpon>Vopros_2_History_of_the_IT_sphere.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami\Vopros_1_History_of_the_IT_sphere.xaml.cs">
+      <DependentUpon>Vopros_1_History_of_the_IT_sphere.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Viktorina.xaml.cs">
       <DependentUpon>Viktorina.xaml</DependentUpon>
     </Compile>
@@ -70,6 +155,66 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PageSVoprosami\Vopros_5_Voprosi_People_in_Programming.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami\Vopros_4_Voprosi_People_in_Programming.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami\Vopros_3_Voprosi_People_in_Programming.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami\Vopros_2_Voprosi_People_in_Programming.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami\Vopros_1_Voprosi_People_in_Programming.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami\Vopros_5_Voprosi_IT.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami\Vopros_4_Voprosi_IT.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami\Vopros_3_Voprosi_IT.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami\Vopros_2_Voprosi_IT.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami\Vopros_1_Voprosi_IT.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami\Vopros_5_History_of_the_IT_sphere.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami\Vopros_4_History_of_the_IT_sphere.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami\Vopros_3_History_of_the_IT_sphere.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami\Vopros_2_History_of_the_IT_sphere.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami\Vopros_1_History_of_the_IT_sphere.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="StartPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -80,7 +225,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Manager.cs" />
+    <Compile Include="ApplicationData\Manager.cs" />
     <Compile Include="StartPage.xaml.cs">
       <DependentUpon>StartPage.xaml</DependentUpon>
     </Compile>
@@ -101,6 +246,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="ApplicationData\ModelProfGames.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelProfGames.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ApplicationData\ModelProfGames.edmx.diagram">
+      <DependentUpon>ModelProfGames.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -108,6 +261,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resource\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationData\ModelProfGames.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelProfGames.edmx</DependentUpon>
+      <LastGenOutput>ModelProfGames.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ApplicationData\ModelProfGames.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelProfGames.edmx</DependentUpon>
+      <LastGenOutput>ModelProfGames.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
