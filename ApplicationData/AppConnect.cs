@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace ProfGames.ApplicationData
 {
-    internal class AppConnect
+    public class AppConnect
     {
-        
+        public class Global
+        {
+            private static string _globalVar = "";
+
+            public static string GlobalVar
+            {
+                get { return _globalVar; }
+                set { _globalVar = value; }
+            }
+        }
     }
 }

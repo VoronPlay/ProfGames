@@ -23,7 +23,11 @@ namespace ProfGames
         public Viktorina()
         {
             InitializeComponent();
+
+           
         }
+        
+
 
         private void Nazad_Click(object sender, RoutedEventArgs e)
         {
@@ -43,6 +47,11 @@ namespace ProfGames
         private void Vopros_4_Voprosi_IT_Click(object sender, RoutedEventArgs e)
         {
             Manager.MainFrame.Navigate(new PageSVoprosami.Page2());
+        }
+
+        internal void ShowDialog()
+        {
+            throw new NotImplementedException();
         }
 
         private void Vopros_5_Voprosi_IT_Click(object sender, RoutedEventArgs e)

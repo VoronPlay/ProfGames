@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProfGames.ApplicationData;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace ProfGames.PageSVoprosami
         public Page10()
         {
             InitializeComponent();
+            Vopros.ItemsSource = profgamessEntities.GetContext().Voprosi_People_in_Programming.ToList();
         }
 
         private void Nazad_Click(object sender, RoutedEventArgs e)

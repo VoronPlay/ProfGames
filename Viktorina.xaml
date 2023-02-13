@@ -50,10 +50,10 @@
         <Button  Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="5" FontSize="20" Content="Вывести победителя"/>
         <Button x:Name="Nazad" Click="Nazad_Click" Grid.Column="15" Grid.Row="9" Grid.ColumnSpan="8" FontSize="20" Content="Вернуться назад"/>
         <TextBlock Text="Команда 1:" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1"/>
-        <TextBlock Text="0" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <TextBlock Text="0" x:Name="Komanda_1" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="2"/>
         <TextBlock Text="Очков" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="7" Grid.Row="1" Grid.ColumnSpan="3"/>
         <TextBlock Text="Команда 2:" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="11" Grid.Row="1" Grid.ColumnSpan="5"/>
-        <TextBlock Text="0" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="19" Grid.Row="1"/>
+        <TextBlock x:Name="Komanda_2" Text="0" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="19" Grid.Row="1"/>
         <TextBlock Text="Очков" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="22" Grid.Row="1" Grid.ColumnSpan="1"/>
         <TextBlock Text="IT-Вопросы" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="3" />
         <TextBlock Grid.Column="1" FontSize="23" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Row="5" Grid.ColumnSpan="3" TextWrapping="Wrap" Text="Люди в Программирование" MaxWidth="300" />

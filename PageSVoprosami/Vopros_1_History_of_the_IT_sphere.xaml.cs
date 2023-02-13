@@ -21,13 +21,13 @@ namespace ProfGames.PageSVoprosami
     /// </summary>
     public partial class Vopros_1_History_of_the_IT_sphere : Page
     {
-
+        public static int Testohko;
         public Vopros_1_History_of_the_IT_sphere()
         {
             InitializeComponent();
-            var v = profgamessEntities.GetContext().Voprosi_History_of_the_IT_sphere.ToString();
-            Vopros.Text = v;
-        }
+            Vopros.ItemsSource = profgamessEntities.GetContext().Voprosi_History_of_the_IT_sphere.ToList();
+            
+    }
 
         private void Otvet_Click(object sender, RoutedEventArgs e)
         {
@@ -37,6 +37,16 @@ namespace ProfGames.PageSVoprosami
         private void Nazad_Click(object sender, RoutedEventArgs e)
         {
             Manager.MainFrame.GoBack();
+        }
+
+        
+
+        private void Test_V1_Click(object sender, RoutedEventArgs e)
+        {
+
+            
+
+
         }
     }
 }
