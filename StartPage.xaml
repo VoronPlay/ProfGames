@@ -40,9 +40,16 @@
         <Button x:Name="Vixod" Click="Vixod_Click" Grid.Column="4" Grid.Row="5" Grid.RowSpan="1" Grid.ColumnSpan="1">
             <TextBlock TextAlignment="Center" FontSize="20">Вывод</TextBlock>
         </Button>
-        <Button Grid.Column="1" Grid.Row="5" Grid.RowSpan="1" Grid.ColumnSpan="2">
+        <Button x:Name="info" Click="info_Click" Grid.Column="1" Grid.Row="5" Grid.RowSpan="1" Grid.ColumnSpan="2">
             <TextBlock TextAlignment="Center" FontSize="20">О приложении</TextBlock>
         </Button>
-        <TextBox Grid.Column="1" Grid.Row="3" Grid.RowSpan="1" Grid.ColumnSpan="7"/>
+        <TextBlock Grid.Column="1" Grid.Row="3" Grid.RowSpan="1" Grid.ColumnSpan="7" FontSize="20" HorizontalAlignment="Center" TextAlignment="Center">
+            <LineBreak/> Привествую тебя дорогой пользователь
+           <LineBreak/> наверное ты сюда зашёл что бы узнать что то новое
+           <LineBreak/> или раширить свой кругозор в свефе IT
+           <LineBreak/> тогда это приложение для тебя
+           <LineBreak/> тут ты можешь пройти викторину узнать по больше об IT-сфере
+           <LineBreak/> или почуствовать тебя программистом и собрать свою первую программу
+        </TextBlock>
     </Grid>
 </Page>

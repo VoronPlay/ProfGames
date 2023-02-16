@@ -34,7 +34,7 @@ namespace ProfGames.PageSVoprosami
 
         private void Otvet_Click(object sender, RoutedEventArgs e)
         {
-
+            TOtvet.Background = Brushes.Black;
         }
     }
 }

@@ -20,11 +20,14 @@ namespace ProfGames
     /// </summary>
     public partial class Viktorina : Page
     {
-        public Viktorina()
+        public Viktorina(int name)
         {
             InitializeComponent();
+            Komanda_1.Text += name;
+            Komanda_2.Text += name;
 
-           
+            double x = double.Parse(Komanda_1.Text);
+            double y = double.Parse(Komanda_2.Text);
         }
         
 
@@ -112,6 +115,26 @@ namespace ProfGames
         private void Vopros_5_History_of_the_IT_sphere_Click(object sender, RoutedEventArgs e)
         {
             Manager.MainFrame.Navigate(new PageSVoprosami.Page6());
+        }
+
+        private void Pobeda_Click(object sender, RoutedEventArgs e)
+        {
+            double x = double.Parse(Komanda_1.Text);
+            double y = double.Parse(Komanda_2.Text);
+
+            if (x > y)
+            {
+                MessageBox.Show("Победила команда 1");
+            }
+            else if (x < y)
+            {
+                MessageBox.Show("Победила команда 2");
+            }
+            else if (x == y)
+            {
+                MessageBox.Show("Победила нечья");
+            }
+
         }
     }
 }

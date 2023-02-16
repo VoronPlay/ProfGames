@@ -27,11 +27,11 @@ namespace ProfGames.PageSVoprosami
             InitializeComponent();
             Vopros.ItemsSource = profgamessEntities.GetContext().Voprosi_History_of_the_IT_sphere.ToList();
             
-    }
+        }
 
         private void Otvet_Click(object sender, RoutedEventArgs e)
         {
-
+            TOtvet.Background = Brushes.Black;
         }
 
         private void Nazad_Click(object sender, RoutedEventArgs e)
@@ -46,6 +46,18 @@ namespace ProfGames.PageSVoprosami
 
             
 
+
+        }
+
+        private void K_1_Click(object sender, RoutedEventArgs e)
+        {
+            
+            int name = Otvet_2.Text;
+            new Viktorina(name).ShowDialog();
+        }
+
+        private void K_2_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }

@@ -47,7 +47,7 @@
             <RowDefinition Height="70*"/>
             <RowDefinition Height="6*"/>
         </Grid.RowDefinitions>
-        <Button  Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="5" FontSize="20" Content="Вывести победителя"/>
+        <Button x:Name="Pobeda" Click="Pobeda_Click" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="5" FontSize="20" Content="Вывести победителя"/>
         <Button x:Name="Nazad" Click="Nazad_Click" Grid.Column="15" Grid.Row="9" Grid.ColumnSpan="8" FontSize="20" Content="Вернуться назад"/>
         <TextBlock Text="Команда 1:" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1"/>
         <TextBlock Text="0" x:Name="Komanda_1" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="2"/>

@@ -32,8 +32,12 @@ namespace ProfGames
 
         private void Vixod_Click(object sender, RoutedEventArgs e)
         {
-            
+            Environment.Exit(0);
         }
 
+        private void info_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
