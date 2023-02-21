@@ -21,6 +21,7 @@ namespace ProfGames.PageSVoprosami
     /// </summary>
     public partial class Vopros_1_History_of_the_IT_sphere : Page
     {
+
         public static int Testohko;
         public Vopros_1_History_of_the_IT_sphere()
         {
@@ -31,12 +32,12 @@ namespace ProfGames.PageSVoprosami
 
         private void Otvet_Click(object sender, RoutedEventArgs e)
         {
-            TOtvet.Background = Brushes.Black;
+            this.Otvet.Visibility = System.Windows.Visibility.Hidden;
         }
 
         private void Nazad_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MainFrame.GoBack();
+            Manager.MainFrame.Navigate(new Viktorina());
         }
 
         
@@ -51,14 +52,16 @@ namespace ProfGames.PageSVoprosami
 
         private void K_1_Click(object sender, RoutedEventArgs e)
         {
-            
-            int name = Otvet_2.Text;
-            new Viktorina(name).ShowDialog();
+            ohko_1.Value = ohko_1.Value+10;
+            Test_1.Value = Test_1.Value + 1;
+            Manager.MainFrame.Navigate(new Viktorina());
         }
 
         private void K_2_Click(object sender, RoutedEventArgs e)
         {
-
+            ohko_2.Value = ohko_2.Value+10;
+            Test_1.Value = Test_1.Value + 1;
+            Manager.MainFrame.Navigate(new Viktorina());
         }
     }
 }

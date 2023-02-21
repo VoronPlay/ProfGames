@@ -38,9 +38,9 @@
         </EntityType>
         <EntityType Name="Voprosi_IT">
           <Key>
-            <PropertyRef Name="int" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="int" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Vopros_1" Type="nchar" MaxLength="60" Nullable="false" />
           <Property Name="Vopros_2" Type="nchar" MaxLength="60" Nullable="false" />
           <Property Name="Vopros_3" Type="nchar" MaxLength="60" Nullable="false" />
@@ -75,7 +75,7 @@
           <End Role="Viktorina" Type="Self.Viktorina" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Voprosi_IT">
-              <PropertyRef Name="int" />
+              <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="Viktorina">
               <PropertyRef Name="Kategotiya_2" />
@@ -155,9 +155,9 @@
         </EntityType>
         <EntityType Name="Voprosi_IT">
           <Key>
-            <PropertyRef Name="int" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="int" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Vopros_1" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Vopros_2" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Vopros_3" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
@@ -194,7 +194,7 @@
           <End Role="Viktorina" Type="Self.Viktorina" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Voprosi_IT">
-              <PropertyRef Name="int" />
+              <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="Viktorina">
               <PropertyRef Name="Kategotiya_2" />
@@ -273,7 +273,7 @@
           <EntitySetMapping Name="Voprosi_IT">
             <EntityTypeMapping TypeName="profgamessModel.Voprosi_IT">
               <MappingFragment StoreEntitySet="Voprosi_IT">
-                <ScalarProperty Name="int" ColumnName="int" />
+                <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="Vopros_1" ColumnName="Vopros_1" />
                 <ScalarProperty Name="Vopros_2" ColumnName="Vopros_2" />
                 <ScalarProperty Name="Vopros_3" ColumnName="Vopros_3" />

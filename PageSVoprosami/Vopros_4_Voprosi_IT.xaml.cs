@@ -29,12 +29,24 @@ namespace ProfGames.PageSVoprosami
 
         private void Nazad_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MainFrame.GoBack();
+            Manager.MainFrame.Navigate(new Viktorina());
         }
 
         private void Otvet_Click(object sender, RoutedEventArgs e)
         {
             Totvet.Background = Brushes.Black;
+        }
+
+        private void K_1_Click(object sender, RoutedEventArgs e)
+        {
+            ohko_1.Value = ohko_1.Value + 40;
+            Manager.MainFrame.Navigate(new Viktorina());
+        }
+
+        private void K_2_Click(object sender, RoutedEventArgs e)
+        {
+            ohko_2.Value = ohko_2.Value + 40;
+            Manager.MainFrame.Navigate(new Viktorina());
         }
     }
 }

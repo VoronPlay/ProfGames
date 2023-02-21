@@ -20,7 +20,7 @@ namespace ProfGames.ApplicationData
             this.Viktorina = new HashSet<Viktorina>();
         }
     
-        public int @int { get; set; }
+        public int id { get; set; }
         public string Vopros_1 { get; set; }
         public string Vopros_2 { get; set; }
         public string Vopros_3 { get; set; }

@@ -37,7 +37,9 @@ namespace ProfGames
 
         private void info_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Данное приложение разработал Рассохин Д.М              " +
+                          "Версия приложение 0.1",
+                    "О приложении", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }

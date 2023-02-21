@@ -15,11 +15,27 @@ using System.Windows.Shapes;
 
 namespace ProfGames
 {
+
+    static class ohko_1
+    {
+        public static int? Value { get; set; }
+    }
+    static class ohko_2
+    {
+        public static int? Value { get; set; }
+    }
+    static class Test_1
+    {
+        public static int? Value { get; set; }
+    }
+
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        
+
         public MainWindow()
         {
             InitializeComponent();

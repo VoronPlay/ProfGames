@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="5a6ea1bac72e4b8797af30cbb76f231e" Name="Diagram1">
+      <Diagram DiagramId="b610c105eaff40cfb4418328749e5b75" Name="Diagram1">
         <EntityTypeShape EntityType="profgamessModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="profgamessModel.Viktorina" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="profgamessModel.Voprosi_History_of_the_IT_sphere" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />

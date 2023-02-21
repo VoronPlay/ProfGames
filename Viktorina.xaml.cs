@@ -17,24 +17,36 @@ namespace ProfGames
 {
     /// <summary>
     /// Логика взаимодействия для Viktorina.xaml
-    /// </summary>
+    /// </summary
     public partial class Viktorina : Page
     {
-        public Viktorina(int name)
+        
+
+        public Viktorina()
         {
             InitializeComponent();
-            Komanda_1.Text += name;
-            Komanda_2.Text += name;
-
-            double x = double.Parse(Komanda_1.Text);
-            double y = double.Parse(Komanda_2.Text);
+            if (ohko_1.Value == null)
+            {
+                ohko_1.Value = Convert.ToInt32(Komanda_1.Text);
+            }
+            if (ohko_2.Value == null)
+            {
+                ohko_2.Value = Convert.ToInt32(Komanda_2.Text);
+            }
+            Komanda_1.Text = ohko_1.Value.ToString();
+            Komanda_2.Text = ohko_2.Value.ToString();
+            
+            if (Test_1.Value == 1)
+            {
+                Vopros_1_Voprosi_IT.Background = Brushes.Red;
+            }
         }
         
 
 
         private void Nazad_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MainFrame.GoBack();
+            Manager.MainFrame.Navigate(new StartPage());
         }
 
         private void Vopros_1_Voprosi_IT_Click(object sender, RoutedEventArgs e)
@@ -50,11 +62,6 @@ namespace ProfGames
         private void Vopros_4_Voprosi_IT_Click(object sender, RoutedEventArgs e)
         {
             Manager.MainFrame.Navigate(new PageSVoprosami.Page2());
-        }
-
-        internal void ShowDialog()
-        {
-            throw new NotImplementedException();
         }
 
         private void Vopros_5_Voprosi_IT_Click(object sender, RoutedEventArgs e)
