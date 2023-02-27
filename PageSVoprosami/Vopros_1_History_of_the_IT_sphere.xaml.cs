@@ -32,7 +32,7 @@ namespace ProfGames.PageSVoprosami
 
         private void Otvet_Click(object sender, RoutedEventArgs e)
         {
-            this.Otvet.Visibility = System.Windows.Visibility.Hidden;
+            TOtvet.Background = Brushes.Black;
         }
 
         private void Nazad_Click(object sender, RoutedEventArgs e)
