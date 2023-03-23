@@ -17,9 +17,15 @@ namespace ProfGames.ApplicationData
         public int Kategotiya_1 { get; set; }
         public int Kategotiya_2 { get; set; }
         public int Kategotiya_3 { get; set; }
+        public int Kot_v_Meshke { get; set; }
+        public int User { get; set; }
+        public int Rekordi { get; set; }
     
+        public virtual Rekordi Rekordi1 { get; set; }
+        public virtual User User1 { get; set; }
         public virtual Voprosi_History_of_the_IT_sphere Voprosi_History_of_the_IT_sphere { get; set; }
         public virtual Voprosi_IT Voprosi_IT { get; set; }
         public virtual Voprosi_People_in_Programming Voprosi_People_in_Programming { get; set; }
+        public virtual Vopsori_Kot_Meshke Vopsori_Kot_Meshke { get; set; }
     }
 }

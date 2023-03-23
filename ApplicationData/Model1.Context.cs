@@ -13,19 +13,19 @@ namespace ProfGames.ApplicationData
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class profgamessEntities : DbContext
+    public partial class ProfGamesEntities : DbContext
     {
-        private static profgamessEntities _context;
+        private static ProfGamesEntities _context;
 
-        public profgamessEntities()
-            : base("name=profgamessEntities")
+        public ProfGamesEntities()
+            : base("name=ProfGamesEntities")
         {
         }
 
-        public static profgamessEntities GetContext()
+        public static ProfGamesEntities GetContext()
         {
             if (_context == null)
-                _context = new profgamessEntities();
+                _context = new ProfGamesEntities();
             return _context;
         }
 
@@ -34,10 +34,13 @@ namespace ProfGames.ApplicationData
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Rekordi> Rekordi { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<User> User { get; set; }
         public virtual DbSet<Viktorina> Viktorina { get; set; }
         public virtual DbSet<Voprosi_History_of_the_IT_sphere> Voprosi_History_of_the_IT_sphere { get; set; }
         public virtual DbSet<Voprosi_IT> Voprosi_IT { get; set; }
         public virtual DbSet<Voprosi_People_in_Programming> Voprosi_People_in_Programming { get; set; }
+        public virtual DbSet<Vopsori_Kot_Meshke> Vopsori_Kot_Meshke { get; set; }
     }
 }

@@ -26,6 +26,16 @@ namespace ProfGames.ApplicationData
         public string Vopros_3 { get; set; }
         public string Vopros_4 { get; set; }
         public string Vopros_5 { get; set; }
+        public string Vopros_6 { get; set; }
+        public string Vopros_7 { get; set; }
+        public string Vopros_8 { get; set; }
+        public string Vopros_9 { get; set; }
+        public string Vopros_10 { get; set; }
+        public string Vopros_11 { get; set; }
+        public string Vopros_12 { get; set; }
+        public string Vopros_13 { get; set; }
+        public string Vopros_14 { get; set; }
+        public string Vopros_15 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Viktorina> Viktorina { get; set; }

@@ -4,15 +4,21 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b610c105eaff40cfb4418328749e5b75" Name="Diagram1">
-        <EntityTypeShape EntityType="profgamessModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="profgamessModel.Viktorina" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="profgamessModel.Voprosi_History_of_the_IT_sphere" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="profgamessModel.Voprosi_IT" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="profgamessModel.Voprosi_People_in_Programming" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
-        <AssociationConnector Association="profgamessModel.FK_Viktorina_Voprosi_History_of_the_IT_sphere" ManuallyRouted="false" />
-        <AssociationConnector Association="profgamessModel.FK_Viktorina_Voprosi_IT" ManuallyRouted="false" />
-        <AssociationConnector Association="profgamessModel.FK_Viktorina_Voprosi_People_in_Programming" ManuallyRouted="false" />
+      <Diagram DiagramId="dab983e1bc374c9692846df7f52ed1ad" Name="Diagram1">
+        <EntityTypeShape EntityType="ProfGamesModel.Rekordi" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProfGamesModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProfGamesModel.User" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProfGamesModel.Viktorina" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProfGamesModel.Voprosi_History_of_the_IT_sphere" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProfGamesModel.Voprosi_IT" Width="1.5" PointX="0.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProfGamesModel.Voprosi_People_in_Programming" Width="1.5" PointX="0.75" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProfGamesModel.Vopsori_Kot_Meshke" Width="1.5" PointX="0.75" PointY="23.25" IsExpanded="true" />
+        <AssociationConnector Association="ProfGamesModel.FK_Viktorina_Rekordi" ManuallyRouted="false" />
+        <AssociationConnector Association="ProfGamesModel.FK_Viktorina_User" ManuallyRouted="false" />
+        <AssociationConnector Association="ProfGamesModel.FK_Viktorina_Voprosi_History_of_the_IT_sphere" ManuallyRouted="false" />
+        <AssociationConnector Association="ProfGamesModel.FK_Viktorina_Voprosi_IT" ManuallyRouted="false" />
+        <AssociationConnector Association="ProfGamesModel.FK_Viktorina_Voprosi_People_in_Programming" ManuallyRouted="false" />
+        <AssociationConnector Association="ProfGamesModel.FK_Viktorina_Vopsori_Kot_Meshke" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

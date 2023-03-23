@@ -4,7 +4,17 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище profgamessModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище ProfGamesModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Rekordi">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="komanda_1" Type="nvarchar" MaxLength="50" />
+          <Property Name="komanda_2" Type="nvarchar" MaxLength="50" />
+          <Property Name="ohko_k_1" Type="int" Nullable="false" />
+          <Property Name="ohko_k_2" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -15,15 +25,30 @@
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="login" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IdRole" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="Viktorina">
           <Key>
             <PropertyRef Name="Kategotiya_1" />
             <PropertyRef Name="Kategotiya_2" />
             <PropertyRef Name="Kategotiya_3" />
+            <PropertyRef Name="Kot_v_Meshke" />
+            <PropertyRef Name="User" />
+            <PropertyRef Name="Rekordi" />
           </Key>
           <Property Name="Kategotiya_1" Type="int" Nullable="false" />
           <Property Name="Kategotiya_2" Type="int" Nullable="false" />
           <Property Name="Kategotiya_3" Type="int" Nullable="false" />
+          <Property Name="Kot_v_Meshke" Type="int" Nullable="false" />
+          <Property Name="User" Type="int" Nullable="false" />
+          <Property Name="Rekordi" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Voprosi_History_of_the_IT_sphere">
           <Key>
@@ -35,6 +60,16 @@
           <Property Name="Vopros_3" Type="nchar" MaxLength="60" Nullable="false" />
           <Property Name="Vopros_4" Type="nchar" MaxLength="60" Nullable="false" />
           <Property Name="Vopros_5" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_6" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_7" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_8" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_9" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_10" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_11" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_12" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_13" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_14" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_15" Type="nchar" MaxLength="60" Nullable="false" />
         </EntityType>
         <EntityType Name="Voprosi_IT">
           <Key>
@@ -46,6 +81,16 @@
           <Property Name="Vopros_3" Type="nchar" MaxLength="60" Nullable="false" />
           <Property Name="Vopros_4" Type="nchar" MaxLength="60" Nullable="false" />
           <Property Name="Vopros_5" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_6" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_7" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_8" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_9" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_10" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_11" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_12" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_13" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_14" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_15" Type="nchar" MaxLength="60" Nullable="false" />
         </EntityType>
         <EntityType Name="Voprosi_People_in_Programming">
           <Key>
@@ -57,7 +102,62 @@
           <Property Name="Vopros_3" Type="nchar" MaxLength="60" Nullable="false" />
           <Property Name="Vopros_4" Type="nchar" MaxLength="60" Nullable="false" />
           <Property Name="Vopros_5" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_6" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_7" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_8" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_9" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_10" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_11" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_12" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_13" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_14" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_15" Type="nchar" MaxLength="60" Nullable="false" />
         </EntityType>
+        <EntityType Name="Vopsori_Kot_Meshke">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Vopros_1" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_2" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_3" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_4" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_5" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_6" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_7" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_8" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_9" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_10" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_11" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_12" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_13" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_14" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Vopros_15" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Viktorina_Rekordi">
+          <End Role="Rekordi" Type="Self.Rekordi" Multiplicity="1" />
+          <End Role="Viktorina" Type="Self.Viktorina" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rekordi">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Viktorina">
+              <PropertyRef Name="Rekordi" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Viktorina_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="Viktorina" Type="Self.Viktorina" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Viktorina">
+              <PropertyRef Name="User" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Viktorina_Voprosi_History_of_the_IT_sphere">
           <End Role="Voprosi_History_of_the_IT_sphere" Type="Self.Voprosi_History_of_the_IT_sphere" Multiplicity="1" />
           <End Role="Viktorina" Type="Self.Viktorina" Multiplicity="*" />
@@ -94,12 +194,35 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Хранилище profgamessModelContainer">
+        <Association Name="FK_Viktorina_Vopsori_Kot_Meshke">
+          <End Role="Vopsori_Kot_Meshke" Type="Self.Vopsori_Kot_Meshke" Multiplicity="1" />
+          <End Role="Viktorina" Type="Self.Viktorina" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vopsori_Kot_Meshke">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Viktorina">
+              <PropertyRef Name="Kot_v_Meshke" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище ProfGamesModelContainer">
+          <EntitySet Name="Rekordi" EntityType="Self.Rekordi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Viktorina" EntityType="Self.Viktorina" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Voprosi_History_of_the_IT_sphere" EntityType="Self.Voprosi_History_of_the_IT_sphere" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Voprosi_IT" EntityType="Self.Voprosi_IT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Voprosi_People_in_Programming" EntityType="Self.Voprosi_People_in_Programming" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Vopsori_Kot_Meshke" EntityType="Self.Vopsori_Kot_Meshke" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Viktorina_Rekordi" Association="Self.FK_Viktorina_Rekordi">
+            <End Role="Rekordi" EntitySet="Rekordi" />
+            <End Role="Viktorina" EntitySet="Viktorina" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Viktorina_User" Association="Self.FK_Viktorina_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Viktorina" EntitySet="Viktorina" />
+          </AssociationSet>
           <AssociationSet Name="FK_Viktorina_Voprosi_History_of_the_IT_sphere" Association="Self.FK_Viktorina_Voprosi_History_of_the_IT_sphere">
             <End Role="Voprosi_History_of_the_IT_sphere" EntitySet="Voprosi_History_of_the_IT_sphere" />
             <End Role="Viktorina" EntitySet="Viktorina" />
@@ -112,12 +235,27 @@
             <End Role="Voprosi_People_in_Programming" EntitySet="Voprosi_People_in_Programming" />
             <End Role="Viktorina" EntitySet="Viktorina" />
           </AssociationSet>
+          <AssociationSet Name="FK_Viktorina_Vopsori_Kot_Meshke" Association="Self.FK_Viktorina_Vopsori_Kot_Meshke">
+            <End Role="Vopsori_Kot_Meshke" EntitySet="Vopsori_Kot_Meshke" />
+            <End Role="Viktorina" EntitySet="Viktorina" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="profgamessModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="ProfGamesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Rekordi">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="komanda_1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="komanda_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ohko_k_1" Type="Int32" Nullable="false" />
+          <Property Name="ohko_k_2" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Viktorina" Relationship="Self.FK_Viktorina_Rekordi" FromRole="Rekordi" ToRole="Viktorina" />
+        </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -128,18 +266,37 @@
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IdRole" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Viktorina" Relationship="Self.FK_Viktorina_User" FromRole="User" ToRole="Viktorina" />
+        </EntityType>
         <EntityType Name="Viktorina">
           <Key>
             <PropertyRef Name="Kategotiya_1" />
             <PropertyRef Name="Kategotiya_2" />
             <PropertyRef Name="Kategotiya_3" />
+            <PropertyRef Name="Kot_v_Meshke" />
+            <PropertyRef Name="User" />
+            <PropertyRef Name="Rekordi" />
           </Key>
           <Property Name="Kategotiya_1" Type="Int32" Nullable="false" />
           <Property Name="Kategotiya_2" Type="Int32" Nullable="false" />
           <Property Name="Kategotiya_3" Type="Int32" Nullable="false" />
+          <Property Name="Kot_v_Meshke" Type="Int32" Nullable="false" />
+          <Property Name="User" Type="Int32" Nullable="false" />
+          <Property Name="Rekordi" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Rekordi1" Relationship="Self.FK_Viktorina_Rekordi" FromRole="Viktorina" ToRole="Rekordi" />
+          <NavigationProperty Name="User1" Relationship="Self.FK_Viktorina_User" FromRole="Viktorina" ToRole="User" />
           <NavigationProperty Name="Voprosi_History_of_the_IT_sphere" Relationship="Self.FK_Viktorina_Voprosi_History_of_the_IT_sphere" FromRole="Viktorina" ToRole="Voprosi_History_of_the_IT_sphere" />
           <NavigationProperty Name="Voprosi_IT" Relationship="Self.FK_Viktorina_Voprosi_IT" FromRole="Viktorina" ToRole="Voprosi_IT" />
           <NavigationProperty Name="Voprosi_People_in_Programming" Relationship="Self.FK_Viktorina_Voprosi_People_in_Programming" FromRole="Viktorina" ToRole="Voprosi_People_in_Programming" />
+          <NavigationProperty Name="Vopsori_Kot_Meshke" Relationship="Self.FK_Viktorina_Vopsori_Kot_Meshke" FromRole="Viktorina" ToRole="Vopsori_Kot_Meshke" />
         </EntityType>
         <EntityType Name="Voprosi_History_of_the_IT_sphere">
           <Key>
@@ -151,6 +308,16 @@
           <Property Name="Vopros_3" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Vopros_4" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Vopros_5" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_6" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_7" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_8" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_9" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_10" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_11" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_12" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_13" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_14" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_15" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Viktorina" Relationship="Self.FK_Viktorina_Voprosi_History_of_the_IT_sphere" FromRole="Voprosi_History_of_the_IT_sphere" ToRole="Viktorina" />
         </EntityType>
         <EntityType Name="Voprosi_IT">
@@ -163,6 +330,16 @@
           <Property Name="Vopros_3" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Vopros_4" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Vopros_5" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_6" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_7" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_8" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_9" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_10" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_11" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_12" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_13" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_14" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_15" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Viktorina" Relationship="Self.FK_Viktorina_Voprosi_IT" FromRole="Voprosi_IT" ToRole="Viktorina" />
         </EntityType>
         <EntityType Name="Voprosi_People_in_Programming">
@@ -175,8 +352,64 @@
           <Property Name="Vopros_3" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Vopros_4" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Vopros_5" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_6" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_7" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_8" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_9" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_10" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_11" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_12" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_13" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_14" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_15" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Viktorina" Relationship="Self.FK_Viktorina_Voprosi_People_in_Programming" FromRole="Voprosi_People_in_Programming" ToRole="Viktorina" />
         </EntityType>
+        <EntityType Name="Vopsori_Kot_Meshke">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Vopros_1" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_2" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_3" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_4" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_5" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_6" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_7" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_8" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_9" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_10" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_11" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_12" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_13" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_14" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Vopros_15" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Viktorina" Relationship="Self.FK_Viktorina_Vopsori_Kot_Meshke" FromRole="Vopsori_Kot_Meshke" ToRole="Viktorina" />
+        </EntityType>
+        <Association Name="FK_Viktorina_Rekordi">
+          <End Role="Rekordi" Type="Self.Rekordi" Multiplicity="1" />
+          <End Role="Viktorina" Type="Self.Viktorina" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rekordi">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Viktorina">
+              <PropertyRef Name="Rekordi" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Viktorina_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="Viktorina" Type="Self.Viktorina" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Viktorina">
+              <PropertyRef Name="User" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Viktorina_Voprosi_History_of_the_IT_sphere">
           <End Role="Voprosi_History_of_the_IT_sphere" Type="Self.Voprosi_History_of_the_IT_sphere" Multiplicity="1" />
           <End Role="Viktorina" Type="Self.Viktorina" Multiplicity="*" />
@@ -213,12 +446,35 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="profgamessEntities" annotation:LazyLoadingEnabled="true">
+        <Association Name="FK_Viktorina_Vopsori_Kot_Meshke">
+          <End Role="Vopsori_Kot_Meshke" Type="Self.Vopsori_Kot_Meshke" Multiplicity="1" />
+          <End Role="Viktorina" Type="Self.Viktorina" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vopsori_Kot_Meshke">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Viktorina">
+              <PropertyRef Name="Kot_v_Meshke" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ProfGamesEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Rekordi" EntityType="Self.Rekordi" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="User" EntityType="Self.User" />
           <EntitySet Name="Viktorina" EntityType="Self.Viktorina" />
           <EntitySet Name="Voprosi_History_of_the_IT_sphere" EntityType="Self.Voprosi_History_of_the_IT_sphere" />
           <EntitySet Name="Voprosi_IT" EntityType="Self.Voprosi_IT" />
           <EntitySet Name="Voprosi_People_in_Programming" EntityType="Self.Voprosi_People_in_Programming" />
+          <EntitySet Name="Vopsori_Kot_Meshke" EntityType="Self.Vopsori_Kot_Meshke" />
+          <AssociationSet Name="FK_Viktorina_Rekordi" Association="Self.FK_Viktorina_Rekordi">
+            <End Role="Rekordi" EntitySet="Rekordi" />
+            <End Role="Viktorina" EntitySet="Viktorina" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Viktorina_User" Association="Self.FK_Viktorina_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Viktorina" EntitySet="Viktorina" />
+          </AssociationSet>
           <AssociationSet Name="FK_Viktorina_Voprosi_History_of_the_IT_sphere" Association="Self.FK_Viktorina_Voprosi_History_of_the_IT_sphere">
             <End Role="Voprosi_History_of_the_IT_sphere" EntitySet="Voprosi_History_of_the_IT_sphere" />
             <End Role="Viktorina" EntitySet="Viktorina" />
@@ -231,15 +487,30 @@
             <End Role="Voprosi_People_in_Programming" EntitySet="Voprosi_People_in_Programming" />
             <End Role="Viktorina" EntitySet="Viktorina" />
           </AssociationSet>
+          <AssociationSet Name="FK_Viktorina_Vopsori_Kot_Meshke" Association="Self.FK_Viktorina_Vopsori_Kot_Meshke">
+            <End Role="Vopsori_Kot_Meshke" EntitySet="Vopsori_Kot_Meshke" />
+            <End Role="Viktorina" EntitySet="Viktorina" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище profgamessModelContainer" CdmEntityContainer="profgamessEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище ProfGamesModelContainer" CdmEntityContainer="ProfGamesEntities">
+          <EntitySetMapping Name="Rekordi">
+            <EntityTypeMapping TypeName="ProfGamesModel.Rekordi">
+              <MappingFragment StoreEntitySet="Rekordi">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="komanda_1" ColumnName="komanda_1" />
+                <ScalarProperty Name="komanda_2" ColumnName="komanda_2" />
+                <ScalarProperty Name="ohko_k_1" ColumnName="ohko_k_1" />
+                <ScalarProperty Name="ohko_k_2" ColumnName="ohko_k_2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="profgamessModel.sysdiagrams">
+            <EntityTypeMapping TypeName="ProfGamesModel.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -249,17 +520,30 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="User">
+            <EntityTypeMapping TypeName="ProfGamesModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Viktorina">
-            <EntityTypeMapping TypeName="profgamessModel.Viktorina">
+            <EntityTypeMapping TypeName="ProfGamesModel.Viktorina">
               <MappingFragment StoreEntitySet="Viktorina">
                 <ScalarProperty Name="Kategotiya_1" ColumnName="Kategotiya_1" />
                 <ScalarProperty Name="Kategotiya_2" ColumnName="Kategotiya_2" />
                 <ScalarProperty Name="Kategotiya_3" ColumnName="Kategotiya_3" />
+                <ScalarProperty Name="Kot_v_Meshke" ColumnName="Kot_v_Meshke" />
+                <ScalarProperty Name="User" ColumnName="User" />
+                <ScalarProperty Name="Rekordi" ColumnName="Rekordi" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Voprosi_History_of_the_IT_sphere">
-            <EntityTypeMapping TypeName="profgamessModel.Voprosi_History_of_the_IT_sphere">
+            <EntityTypeMapping TypeName="ProfGamesModel.Voprosi_History_of_the_IT_sphere">
               <MappingFragment StoreEntitySet="Voprosi_History_of_the_IT_sphere">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="Vopros_1" ColumnName="Vopros_1" />
@@ -267,11 +551,21 @@
                 <ScalarProperty Name="Vopros_3" ColumnName="Vopros_3" />
                 <ScalarProperty Name="Vopros_4" ColumnName="Vopros_4" />
                 <ScalarProperty Name="Vopros_5" ColumnName="Vopros_5" />
+                <ScalarProperty Name="Vopros_6" ColumnName="Vopros_6" />
+                <ScalarProperty Name="Vopros_7" ColumnName="Vopros_7" />
+                <ScalarProperty Name="Vopros_8" ColumnName="Vopros_8" />
+                <ScalarProperty Name="Vopros_9" ColumnName="Vopros_9" />
+                <ScalarProperty Name="Vopros_10" ColumnName="Vopros_10" />
+                <ScalarProperty Name="Vopros_11" ColumnName="Vopros_11" />
+                <ScalarProperty Name="Vopros_12" ColumnName="Vopros_12" />
+                <ScalarProperty Name="Vopros_13" ColumnName="Vopros_13" />
+                <ScalarProperty Name="Vopros_14" ColumnName="Vopros_14" />
+                <ScalarProperty Name="Vopros_15" ColumnName="Vopros_15" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Voprosi_IT">
-            <EntityTypeMapping TypeName="profgamessModel.Voprosi_IT">
+            <EntityTypeMapping TypeName="ProfGamesModel.Voprosi_IT">
               <MappingFragment StoreEntitySet="Voprosi_IT">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="Vopros_1" ColumnName="Vopros_1" />
@@ -279,11 +573,21 @@
                 <ScalarProperty Name="Vopros_3" ColumnName="Vopros_3" />
                 <ScalarProperty Name="Vopros_4" ColumnName="Vopros_4" />
                 <ScalarProperty Name="Vopros_5" ColumnName="Vopros_5" />
+                <ScalarProperty Name="Vopros_6" ColumnName="Vopros_6" />
+                <ScalarProperty Name="Vopros_7" ColumnName="Vopros_7" />
+                <ScalarProperty Name="Vopros_8" ColumnName="Vopros_8" />
+                <ScalarProperty Name="Vopros_9" ColumnName="Vopros_9" />
+                <ScalarProperty Name="Vopros_10" ColumnName="Vopros_10" />
+                <ScalarProperty Name="Vopros_11" ColumnName="Vopros_11" />
+                <ScalarProperty Name="Vopros_12" ColumnName="Vopros_12" />
+                <ScalarProperty Name="Vopros_13" ColumnName="Vopros_13" />
+                <ScalarProperty Name="Vopros_14" ColumnName="Vopros_14" />
+                <ScalarProperty Name="Vopros_15" ColumnName="Vopros_15" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Voprosi_People_in_Programming">
-            <EntityTypeMapping TypeName="profgamessModel.Voprosi_People_in_Programming">
+            <EntityTypeMapping TypeName="ProfGamesModel.Voprosi_People_in_Programming">
               <MappingFragment StoreEntitySet="Voprosi_People_in_Programming">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="Vopros_1" ColumnName="Vopros_1" />
@@ -291,6 +595,38 @@
                 <ScalarProperty Name="Vopros_3" ColumnName="Vopros_3" />
                 <ScalarProperty Name="Vopros_4" ColumnName="Vopros_4" />
                 <ScalarProperty Name="Vopros_5" ColumnName="Vopros_5" />
+                <ScalarProperty Name="Vopros_6" ColumnName="Vopros_6" />
+                <ScalarProperty Name="Vopros_7" ColumnName="Vopros_7" />
+                <ScalarProperty Name="Vopros_8" ColumnName="Vopros_8" />
+                <ScalarProperty Name="Vopros_9" ColumnName="Vopros_9" />
+                <ScalarProperty Name="Vopros_10" ColumnName="Vopros_10" />
+                <ScalarProperty Name="Vopros_11" ColumnName="Vopros_11" />
+                <ScalarProperty Name="Vopros_12" ColumnName="Vopros_12" />
+                <ScalarProperty Name="Vopros_13" ColumnName="Vopros_13" />
+                <ScalarProperty Name="Vopros_14" ColumnName="Vopros_14" />
+                <ScalarProperty Name="Vopros_15" ColumnName="Vopros_15" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vopsori_Kot_Meshke">
+            <EntityTypeMapping TypeName="ProfGamesModel.Vopsori_Kot_Meshke">
+              <MappingFragment StoreEntitySet="Vopsori_Kot_Meshke">
+                <ScalarProperty Name="Vopros_1" ColumnName="Vopros_1" />
+                <ScalarProperty Name="Vopros_2" ColumnName="Vopros_2" />
+                <ScalarProperty Name="Vopros_3" ColumnName="Vopros_3" />
+                <ScalarProperty Name="Vopros_4" ColumnName="Vopros_4" />
+                <ScalarProperty Name="Vopros_5" ColumnName="Vopros_5" />
+                <ScalarProperty Name="Vopros_6" ColumnName="Vopros_6" />
+                <ScalarProperty Name="Vopros_7" ColumnName="Vopros_7" />
+                <ScalarProperty Name="Vopros_8" ColumnName="Vopros_8" />
+                <ScalarProperty Name="Vopros_9" ColumnName="Vopros_9" />
+                <ScalarProperty Name="Vopros_10" ColumnName="Vopros_10" />
+                <ScalarProperty Name="Vopros_11" ColumnName="Vopros_11" />
+                <ScalarProperty Name="Vopros_12" ColumnName="Vopros_12" />
+                <ScalarProperty Name="Vopros_13" ColumnName="Vopros_13" />
+                <ScalarProperty Name="Vopros_14" ColumnName="Vopros_14" />
+                <ScalarProperty Name="Vopros_15" ColumnName="Vopros_15" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

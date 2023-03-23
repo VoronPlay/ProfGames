@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,28 +17,66 @@ using ProfGames.ApplicationData;
 
 namespace ProfGames.PageSVoprosami
 {
+
+
     /// <summary>
     /// Логика взаимодействия для Vopros_1_History_of_the_IT_sphere.xaml
     /// </summary>
     public partial class Vopros_1_History_of_the_IT_sphere : Page
     {
 
-        public static int Testohko;
         public Vopros_1_History_of_the_IT_sphere()
         {
             InitializeComponent();
-            Vopros.ItemsSource = profgamessEntities.GetContext().Voprosi_History_of_the_IT_sphere.ToList();
-            
-        }
+            Vopros.ItemsSource = ProfGamesEntities.GetContext().Voprosi_People_in_Programming.ToList();
 
+        }
         private void Otvet_Click(object sender, RoutedEventArgs e)
         {
-            TOtvet.Background = Brushes.Black;
+            
+            if ((bool)Chek_1.IsChecked)
+            {
+                Text_1.Background = Brushes.Red;
+            }
+            if ((bool)Chek_2.IsChecked)
+            {
+                Text_2.Background = Brushes.Red;
+            }
+            if ((bool)Chek_3.IsChecked)
+            {
+                Text_3.Background = Brushes.Red;
+            }
+            if ((bool)Chek_4.IsChecked)
+            {
+                Text_4.Background = Brushes.Green;
+            }
+
+            if ((bool)Chek_1.IsChecked)
+            {
+                TOtvet.Foreground = Brushes.DarkBlue;
+            }
+            else if ((bool)Chek_2.IsChecked)
+            {
+                TOtvet.Foreground = Brushes.DarkBlue;
+            }
+            else if ((bool)Chek_3.IsChecked)
+            {
+                TOtvet.Foreground = Brushes.DarkBlue;
+            }
+            else if ((bool)Chek_4.IsChecked)
+            {
+                TOtvet.Foreground = Brushes.DarkBlue;
+            }
+            else
+            {
+                MessageBox.Show("Выберите ответ");
+            }
         }
 
         private void Nazad_Click(object sender, RoutedEventArgs e)
         {
             Manager.MainFrame.Navigate(new Viktorina());
+
         }
 
         
@@ -52,16 +91,66 @@ namespace ProfGames.PageSVoprosami
 
         private void K_1_Click(object sender, RoutedEventArgs e)
         {
-            ohko_1.Value = ohko_1.Value+10;
-            Test_1.Value = Test_1.Value + 1;
-            Manager.MainFrame.Navigate(new Viktorina());
+            if ((bool)Chek_1.IsChecked)
+            {
+                ohko_1.Value = ohko_1.Value + 10;
+                test1.Value = test1.Value + 1;
+                Manager.MainFrame.Navigate(new Viktorina());
+            }
+            else if ((bool)Chek_2.IsChecked)
+            {
+                ohko_1.Value = ohko_1.Value + 10;
+                test1.Value = test1.Value + 1;
+                Manager.MainFrame.Navigate(new Viktorina());
+            }
+            else if ((bool)Chek_3.IsChecked)
+            {
+                ohko_1.Value = ohko_1.Value + 10;
+                test1.Value = test1.Value + 1;
+                Manager.MainFrame.Navigate(new Viktorina());
+            }
+            else if ((bool)Chek_4.IsChecked)
+            {
+                ohko_1.Value = ohko_1.Value + 10;
+                test1.Value = test1.Value + 1;
+                Manager.MainFrame.Navigate(new Viktorina());
+            }
+            else
+            {
+                MessageBox.Show("Выберите ответ");
+            }
         }
 
         private void K_2_Click(object sender, RoutedEventArgs e)
         {
-            ohko_2.Value = ohko_2.Value+10;
-            Test_1.Value = Test_1.Value + 1;
-            Manager.MainFrame.Navigate(new Viktorina());
+            if ((bool)Chek_1.IsChecked)
+            {
+                ohko_2.Value = ohko_2.Value + 10;
+                test1.Value = test1.Value + 1;
+                Manager.MainFrame.Navigate(new Viktorina());
+            }
+            else if ((bool)Chek_2.IsChecked)
+            {
+                ohko_2.Value = ohko_2.Value + 10;
+                test1.Value = test1.Value + 1;
+                Manager.MainFrame.Navigate(new Viktorina());
+            }
+            else if ((bool)Chek_3.IsChecked)
+            {
+                ohko_2.Value = ohko_2.Value + 10;
+                test1.Value = test1.Value + 1;
+                Manager.MainFrame.Navigate(new Viktorina());
+            }
+            else if ((bool)Chek_4.IsChecked)
+            {
+                ohko_2.Value = ohko_2.Value + 10;
+                test1.Value = test1.Value + 1;
+                Manager.MainFrame.Navigate(new Viktorina());
+            }
+            else
+            {
+                MessageBox.Show("Выберите ответ");
+            }
         }
     }
 }

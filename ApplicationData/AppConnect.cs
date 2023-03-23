@@ -8,15 +8,6 @@ namespace ProfGames.ApplicationData
 {
     public class AppConnect
     {
-        public class Global
-        {
-            private static string _globalVar = "";
-
-            public static string GlobalVar
-            {
-                get { return _globalVar; }
-                set { _globalVar = value; }
-            }
-        }
+        public static ProfGamesEntities model1db;
     }
 }

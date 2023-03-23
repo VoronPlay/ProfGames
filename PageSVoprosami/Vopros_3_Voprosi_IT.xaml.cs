@@ -24,7 +24,7 @@ namespace ProfGames.PageSVoprosami
         public Page3()
         {
             InitializeComponent();
-            Vopros.ItemsSource = profgamessEntities.GetContext().Voprosi_IT.ToList();
+            Vopros.ItemsSource = ProfGamesEntities.GetContext().Voprosi_IT.ToList();
         }
 
         private void Nazad_Click(object sender, RoutedEventArgs e)
@@ -34,19 +34,107 @@ namespace ProfGames.PageSVoprosami
 
         private void Otvet_Click(object sender, RoutedEventArgs e)
         {
-            Totvet.Background = Brushes.Black;
+            if ((bool)Chek_1.IsChecked)
+            {
+                Text_1.Background = Brushes.Red;
+            }
+            if ((bool)Chek_2.IsChecked)
+            {
+                Text_2.Background = Brushes.Red;
+            }
+            if ((bool)Chek_3.IsChecked)
+            {
+                Text_3.Background = Brushes.Green;            
+            }
+            if ((bool)Chek_4.IsChecked)
+            {
+                Text_4.Background = Brushes.Red;
+            }
+
+            if ((bool)Chek_1.IsChecked)
+            {
+                Totvet.Background = Brushes.Black;
+            }
+            else if ((bool)Chek_2.IsChecked)
+            {
+                Totvet.Background = Brushes.Black;
+            }
+            else if ((bool)Chek_3.IsChecked)
+            {
+                Totvet.Background = Brushes.Black;
+            }
+            else if ((bool)Chek_4.IsChecked)
+            {
+                Totvet.Background = Brushes.Black;
+            }
+            else
+            {
+                MessageBox.Show("Выберите ответ");
+            }
         }
 
         private void K_1_Click(object sender, RoutedEventArgs e)
         {
-            ohko_1.Value = ohko_1.Value + 30;
-            Manager.MainFrame.Navigate(new Viktorina());
+            if ((bool)Chek_1.IsChecked)
+            {
+                ohko_1.Value = ohko_1.Value + 30;
+                test8.Value = test8.Value + 1;
+                Manager.MainFrame.Navigate(new Viktorina());
+            }
+            else if ((bool)Chek_2.IsChecked)
+            {
+                ohko_1.Value = ohko_1.Value + 30;
+                test8.Value = test8.Value + 1;
+                Manager.MainFrame.Navigate(new Viktorina());
+            }
+            else if ((bool)Chek_3.IsChecked)
+            {
+                ohko_1.Value = ohko_1.Value + 30;
+                test8.Value = test8.Value + 1;
+                Manager.MainFrame.Navigate(new Viktorina());
+            }
+            else if ((bool)Chek_4.IsChecked)
+            {
+                ohko_1.Value = ohko_1.Value + 30;
+                test8.Value = test8.Value + 1;
+                Manager.MainFrame.Navigate(new Viktorina());
+            }
+            else
+            {
+                MessageBox.Show("Выберите ответ");
+            }
         }
 
         private void K_2_Click(object sender, RoutedEventArgs e)
         {
-            ohko_2.Value = ohko_2.Value + 30;
-            Manager.MainFrame.Navigate(new Viktorina());
+            if ((bool)Chek_1.IsChecked)
+            {
+                ohko_2.Value = ohko_2.Value + 30;
+                test8.Value = test8.Value + 1;
+                Manager.MainFrame.Navigate(new Viktorina());
+            }
+            else if ((bool)Chek_2.IsChecked)
+            {
+                ohko_2.Value = ohko_2.Value + 30;
+                test8.Value = test8.Value + 1;
+                Manager.MainFrame.Navigate(new Viktorina());
+            }
+            else if ((bool)Chek_3.IsChecked)
+            {
+                ohko_2.Value = ohko_2.Value + 30;
+                test8.Value = test8.Value + 1;
+                Manager.MainFrame.Navigate(new Viktorina());
+            }
+            else if ((bool)Chek_4.IsChecked)
+            {
+                ohko_2.Value = ohko_2.Value + 30;
+                test8.Value = test8.Value + 1;
+                Manager.MainFrame.Navigate(new Viktorina());
+            }
+            else
+            {
+                MessageBox.Show("Выберите ответ");
+            }
         }
     }
 }

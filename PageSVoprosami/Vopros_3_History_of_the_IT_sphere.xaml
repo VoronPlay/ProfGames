@@ -36,12 +36,24 @@
                 <DataGridTextColumn Header="Вопрос на 30 очков" FontSize="20" Binding="{Binding Vopros_3}" Width="30*"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Grid.Column="3" x:Name="K_1" Click="K_1_Click" FontSize="26" Content="Команда 1" Grid.Row="5" Grid.RowSpan="1" Grid.ColumnSpan="1"/>
-        <Button Grid.Column="3" x:Name="K_2" Click="K_2_Click"  FontSize="26" Content="Команда 2" Grid.Row="3" Grid.RowSpan="1" Grid.ColumnSpan="1"/>
-        <RadioButton Content="IOS" Grid.Column="1" Grid.Row="5" Grid.RowSpan="1" Grid.ColumnSpan="1"/>
-        <RadioButton Content="Android" Grid.Column="1" Grid.Row="3" Grid.RowSpan="1" Grid.ColumnSpan="1"/>
-        <RadioButton Content="GM-НАА" Grid.Column="1" Grid.Row="7" Grid.RowSpan="1" Grid.ColumnSpan="1"/>
-        <RadioButton Content="Windows" Grid.Column="1" Grid.Row="9" Grid.RowSpan="1" Grid.ColumnSpan="1"/>
+        <Button Grid.Column="3" x:Name="K_1" Click="K_1_Click" FontSize="26" Grid.Row="5" Grid.RowSpan="1" Grid.ColumnSpan="1">
+            <TextBlock TextAlignment="Center" FontSize="15">Начислить очки <LineBreak/> команде 1</TextBlock>
+        </Button>
+        <Button Grid.Column="3" x:Name="K_2" Click="K_2_Click"  FontSize="26" Grid.Row="3" Grid.RowSpan="1" Grid.ColumnSpan="1">
+            <TextBlock TextAlignment="Center" FontSize="15">Начислить очки <LineBreak/> команде 2</TextBlock>
+        </Button>
+        <CheckBox x:Name="Chek_2" Grid.Column="1" Grid.Row="5" Grid.RowSpan="1" Grid.ColumnSpan="1">
+            <TextBlock x:Name="Text_2" TextAlignment="Left" FontSize="12">IOS</TextBlock>
+        </CheckBox>
+        <CheckBox x:Name="Chek_1" Grid.Column="1" Grid.Row="3" Grid.RowSpan="1" Grid.ColumnSpan="1">
+            <TextBlock x:Name="Text_1" TextAlignment="Left" FontSize="12">Android</TextBlock>
+        </CheckBox>
+        <CheckBox x:Name="Chek_3" Grid.Column="1" Grid.Row="7" Grid.RowSpan="1" Grid.ColumnSpan="1">
+            <TextBlock x:Name="Text_3" TextAlignment="Left" FontSize="12">GM-НАА</TextBlock>
+        </CheckBox>
+        <CheckBox x:Name="Chek_4" Grid.Column="1" Grid.Row="9" Grid.RowSpan="1" Grid.ColumnSpan="1">
+            <TextBlock x:Name="Text_4" TextAlignment="Left" FontSize="12">Windows</TextBlock>
+        </CheckBox>
         <Button Grid.Column="3" x:Name="Nazad" Click="Nazad_Click" FontSize="26" Content="Вернуться назад" Grid.Row="7" Grid.RowSpan="1" Grid.ColumnSpan="1"/>
         <Button Grid.Column="3" x:Name="Otvet" Click="Otvet_Click" Grid.Row="9" FontSize="26" Content="Вывести ответ" Grid.RowSpan="1" Grid.ColumnSpan="1"/>
         <TextBlock Grid.Column="1" Text=" GM-НАА. Ее создали в 1955 году Роберт Патрик, который работал в General Motors" Foreground="White" x:Name="Totvet" Grid.Row="11" Grid.RowSpan="1" Grid.ColumnSpan="3"/>

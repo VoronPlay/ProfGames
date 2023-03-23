@@ -35,16 +35,24 @@
                 <DataGridTextColumn Header="Вопрос на 10 очков" FontSize="20" Binding="{Binding Vopros_1}" Width="30*"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <RadioButton Content="сеть и всемирная система объединённых компьютерных сетей" Grid.Column="1" Grid.Row="5" Grid.RowSpan="1" Grid.ColumnSpan="1" />
-        <RadioButton  Grid.Column="1" Grid.Row="3" Grid.RowSpan="1" Grid.ColumnSpan="1">
-            <TextBlock TextAlignment="Left" FontSize="11"> интернет-протокол, призванная решить проблемы <LineBreak/> с которыми столкнулась предыдущая версия при её <LineBreak/> использовании в Интернете</TextBlock>
-        </RadioButton>
-        <RadioButton Content="Уникальный числовой идентификатор устройства в компьютерной сети" Grid.Column="1" Grid.Row="7" Grid.RowSpan="1" Grid.ColumnSpan="1"/>
-        <RadioButton Grid.Column="1" Grid.Row="9" Grid.RowSpan="1" Grid.ColumnSpan="1">
-            <TextBlock  TextAlignment="Left" FontSize="12"> Это механизм в сетях TCP/IP, позволяющий преобразовывать IP-адреса <LineBreak/> транзитных пакетов</TextBlock>
-        </RadioButton>
-        <Button Grid.Column="3" x:Name="K_1" Click="K_1_Click" FontSize="26" Content="Команда 1" Grid.Row="5" Grid.RowSpan="1" Grid.ColumnSpan="1"/>
-        <Button Grid.Column="3" x:Name="K_2" Click="K_2_Click"  FontSize="26" Content="Команда 2" Grid.Row="3" Grid.RowSpan="1" Grid.ColumnSpan="1"/>
+        <CheckBox x:Name="Chek_2" Grid.Column="1" Grid.Row="5" Grid.RowSpan="1" Grid.ColumnSpan="1">
+            <TextBlock x:Name="Text_2" TextAlignment="Left" FontSize="12">сеть и всемирная система объединённых компьютерных сетей</TextBlock>
+        </CheckBox>
+        <CheckBox x:Name="Chek_1"  Grid.Column="1" Grid.Row="3" Grid.RowSpan="1" Grid.ColumnSpan="1">
+            <TextBlock x:Name="Text_1" TextAlignment="Left" FontSize="11"> интернет-протокол, призванная решить проблемы <LineBreak/> с которыми столкнулась предыдущая версия при её <LineBreak/> использовании в Интернете</TextBlock>
+        </CheckBox>
+        <CheckBox x:Name="Chek_3" Grid.Column="1" Grid.Row="7" Grid.RowSpan="1" Grid.ColumnSpan="1">
+            <TextBlock x:Name="Text_3" TextAlignment="Left" FontSize="12">Уникальный числовой идентификатор устройства в компьютерной сети</TextBlock>
+        </CheckBox>
+        <CheckBox x:Name="Chek_4" Grid.Column="1" Grid.Row="9" Grid.RowSpan="1" Grid.ColumnSpan="1">
+            <TextBlock x:Name="Text_4" TextAlignment="Left" FontSize="12"> Это механизм в сетях TCP/IP, позволяющий преобразовывать IP-адреса <LineBreak/> транзитных пакетов</TextBlock>
+        </CheckBox>
+        <Button Grid.Column="3" x:Name="K_1" Click="K_1_Click" FontSize="26" Grid.Row="5" Grid.RowSpan="1" Grid.ColumnSpan="1">
+            <TextBlock TextAlignment="Center" FontSize="15">Начислить очки <LineBreak/> команде 1</TextBlock>
+        </Button>
+        <Button Grid.Column="3" x:Name="K_2" Click="K_2_Click"  FontSize="26" Grid.Row="3" Grid.RowSpan="1" Grid.ColumnSpan="1">
+            <TextBlock TextAlignment="Center" FontSize="15">Начислить очки <LineBreak/> команде 2</TextBlock>
+        </Button>
         <Button Grid.Column="3" x:Name="Nazad" Click="Nazad_Click" FontSize="26" Content="Вернуться назад" Grid.Row="7" Grid.RowSpan="1" Grid.ColumnSpan="1"/>
         <Button Grid.Column="3" x:Name="Otvet" Click="Otvet_Click" Grid.Row="9" FontSize="26" Content="Вывести ответ" Grid.RowSpan="1" Grid.ColumnSpan="1"/>
         <TextBlock x:Name="TOtvet" Text="Уникальный числовой идентификатор устройства в компьютерной сети" Foreground="White" Grid.Column="1" Grid.Row="11" Grid.RowSpan="1" Grid.ColumnSpan="3"/>

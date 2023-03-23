@@ -27,7 +27,7 @@ namespace ProfGames
 
         private void Viktorina_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MainFrame.Navigate(new Viktorina());
+            Manager.MainFrame.Navigate(new PageSVoprosami.dialog_1());
         }
 
         private void Vixod_Click(object sender, RoutedEventArgs e)
@@ -40,6 +40,11 @@ namespace ProfGames
             MessageBox.Show("Данное приложение разработал Рассохин Д.М              " +
                           "Версия приложение 0.1",
                     "О приложении", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void Rekordi_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new avtorixahiya());
         }
     }
 }
