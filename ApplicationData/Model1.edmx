@@ -5,6 +5,15 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="Хранилище ProfGamesModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Memo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="time" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="diapozon" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="Rekordi">
           <Key>
             <PropertyRef Name="id" />
@@ -12,8 +21,12 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="komanda_1" Type="nvarchar" MaxLength="50" />
           <Property Name="komanda_2" Type="nvarchar" MaxLength="50" />
-          <Property Name="ohko_k_1" Type="int" Nullable="false" />
-          <Property Name="ohko_k_2" Type="int" Nullable="false" />
+          <Property Name="ohko_k_1" Type="int" />
+          <Property Name="ohko_k_2" Type="int" />
+          <Property Name="komanda_3" Type="nvarchar" MaxLength="50" />
+          <Property Name="komanda_4" Type="nvarchar" MaxLength="50" />
+          <Property Name="ohko_k_3" Type="int" />
+          <Property Name="ohko_k_4" Type="int" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -42,6 +55,7 @@
             <PropertyRef Name="Kot_v_Meshke" />
             <PropertyRef Name="User" />
             <PropertyRef Name="Rekordi" />
+            <PropertyRef Name="Memo" />
           </Key>
           <Property Name="Kategotiya_1" Type="int" Nullable="false" />
           <Property Name="Kategotiya_2" Type="int" Nullable="false" />
@@ -49,6 +63,7 @@
           <Property Name="Kot_v_Meshke" Type="int" Nullable="false" />
           <Property Name="User" Type="int" Nullable="false" />
           <Property Name="Rekordi" Type="int" Nullable="false" />
+          <Property Name="Memo" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Voprosi_History_of_the_IT_sphere">
           <Key>
@@ -134,6 +149,18 @@
           <Property Name="Vopros_15" Type="nchar" MaxLength="60" Nullable="false" />
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
+        <Association Name="FK_Viktorina_Memo">
+          <End Role="Memo" Type="Self.Memo" Multiplicity="1" />
+          <End Role="Viktorina" Type="Self.Viktorina" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Memo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Viktorina">
+              <PropertyRef Name="Memo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Viktorina_Rekordi">
           <End Role="Rekordi" Type="Self.Rekordi" Multiplicity="1" />
           <End Role="Viktorina" Type="Self.Viktorina" Multiplicity="*" />
@@ -207,6 +234,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="Хранилище ProfGamesModelContainer">
+          <EntitySet Name="Memo" EntityType="Self.Memo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Rekordi" EntityType="Self.Rekordi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
@@ -215,6 +243,10 @@
           <EntitySet Name="Voprosi_IT" EntityType="Self.Voprosi_IT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Voprosi_People_in_Programming" EntityType="Self.Voprosi_People_in_Programming" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Vopsori_Kot_Meshke" EntityType="Self.Vopsori_Kot_Meshke" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Viktorina_Memo" Association="Self.FK_Viktorina_Memo">
+            <End Role="Memo" EntitySet="Memo" />
+            <End Role="Viktorina" EntitySet="Viktorina" />
+          </AssociationSet>
           <AssociationSet Name="FK_Viktorina_Rekordi" Association="Self.FK_Viktorina_Rekordi">
             <End Role="Rekordi" EntitySet="Rekordi" />
             <End Role="Viktorina" EntitySet="Viktorina" />
@@ -245,6 +277,16 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ProfGamesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Memo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="time" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="diapozon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Viktorina" Relationship="Self.FK_Viktorina_Memo" FromRole="Memo" ToRole="Viktorina" />
+        </EntityType>
         <EntityType Name="Rekordi">
           <Key>
             <PropertyRef Name="id" />
@@ -252,8 +294,12 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="komanda_1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="komanda_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ohko_k_1" Type="Int32" Nullable="false" />
-          <Property Name="ohko_k_2" Type="Int32" Nullable="false" />
+          <Property Name="ohko_k_1" Type="Int32" />
+          <Property Name="ohko_k_2" Type="Int32" />
+          <Property Name="komanda_3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="komanda_4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ohko_k_3" Type="Int32" />
+          <Property Name="ohko_k_4" Type="Int32" />
           <NavigationProperty Name="Viktorina" Relationship="Self.FK_Viktorina_Rekordi" FromRole="Rekordi" ToRole="Viktorina" />
         </EntityType>
         <EntityType Name="sysdiagrams">
@@ -284,6 +330,7 @@
             <PropertyRef Name="Kot_v_Meshke" />
             <PropertyRef Name="User" />
             <PropertyRef Name="Rekordi" />
+            <PropertyRef Name="Memo" />
           </Key>
           <Property Name="Kategotiya_1" Type="Int32" Nullable="false" />
           <Property Name="Kategotiya_2" Type="Int32" Nullable="false" />
@@ -291,6 +338,8 @@
           <Property Name="Kot_v_Meshke" Type="Int32" Nullable="false" />
           <Property Name="User" Type="Int32" Nullable="false" />
           <Property Name="Rekordi" Type="Int32" Nullable="false" />
+          <Property Name="Memo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Memo1" Relationship="Self.FK_Viktorina_Memo" FromRole="Viktorina" ToRole="Memo" />
           <NavigationProperty Name="Rekordi1" Relationship="Self.FK_Viktorina_Rekordi" FromRole="Viktorina" ToRole="Rekordi" />
           <NavigationProperty Name="User1" Relationship="Self.FK_Viktorina_User" FromRole="Viktorina" ToRole="User" />
           <NavigationProperty Name="Voprosi_History_of_the_IT_sphere" Relationship="Self.FK_Viktorina_Voprosi_History_of_the_IT_sphere" FromRole="Viktorina" ToRole="Voprosi_History_of_the_IT_sphere" />
@@ -386,6 +435,18 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Viktorina" Relationship="Self.FK_Viktorina_Vopsori_Kot_Meshke" FromRole="Vopsori_Kot_Meshke" ToRole="Viktorina" />
         </EntityType>
+        <Association Name="FK_Viktorina_Memo">
+          <End Role="Memo" Type="Self.Memo" Multiplicity="1" />
+          <End Role="Viktorina" Type="Self.Viktorina" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Memo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Viktorina">
+              <PropertyRef Name="Memo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Viktorina_Rekordi">
           <End Role="Rekordi" Type="Self.Rekordi" Multiplicity="1" />
           <End Role="Viktorina" Type="Self.Viktorina" Multiplicity="*" />
@@ -459,6 +520,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="ProfGamesEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Memo" EntityType="Self.Memo" />
           <EntitySet Name="Rekordi" EntityType="Self.Rekordi" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="User" EntityType="Self.User" />
@@ -467,6 +529,10 @@
           <EntitySet Name="Voprosi_IT" EntityType="Self.Voprosi_IT" />
           <EntitySet Name="Voprosi_People_in_Programming" EntityType="Self.Voprosi_People_in_Programming" />
           <EntitySet Name="Vopsori_Kot_Meshke" EntityType="Self.Vopsori_Kot_Meshke" />
+          <AssociationSet Name="FK_Viktorina_Memo" Association="Self.FK_Viktorina_Memo">
+            <End Role="Memo" EntitySet="Memo" />
+            <End Role="Viktorina" EntitySet="Viktorina" />
+          </AssociationSet>
           <AssociationSet Name="FK_Viktorina_Rekordi" Association="Self.FK_Viktorina_Rekordi">
             <End Role="Rekordi" EntitySet="Rekordi" />
             <End Role="Viktorina" EntitySet="Viktorina" />
@@ -498,6 +564,16 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="Хранилище ProfGamesModelContainer" CdmEntityContainer="ProfGamesEntities">
+          <EntitySetMapping Name="Memo">
+            <EntityTypeMapping TypeName="ProfGamesModel.Memo">
+              <MappingFragment StoreEntitySet="Memo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="diapozon" ColumnName="diapozon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Rekordi">
             <EntityTypeMapping TypeName="ProfGamesModel.Rekordi">
               <MappingFragment StoreEntitySet="Rekordi">
@@ -506,6 +582,10 @@
                 <ScalarProperty Name="komanda_2" ColumnName="komanda_2" />
                 <ScalarProperty Name="ohko_k_1" ColumnName="ohko_k_1" />
                 <ScalarProperty Name="ohko_k_2" ColumnName="ohko_k_2" />
+                <ScalarProperty Name="komanda_3" ColumnName="komanda_3" />
+                <ScalarProperty Name="komanda_4" ColumnName="komanda_4" />
+                <ScalarProperty Name="ohko_k_3" ColumnName="ohko_k_3" />
+                <ScalarProperty Name="ohko_k_4" ColumnName="ohko_k_4" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -539,6 +619,7 @@
                 <ScalarProperty Name="Kot_v_Meshke" ColumnName="Kot_v_Meshke" />
                 <ScalarProperty Name="User" ColumnName="User" />
                 <ScalarProperty Name="Rekordi" ColumnName="Rekordi" />
+                <ScalarProperty Name="Memo" ColumnName="Memo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

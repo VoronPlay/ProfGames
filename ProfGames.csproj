@@ -44,6 +44,7 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -68,6 +69,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ApplicationData\AppConnect.cs" />
+    <Compile Include="ApplicationData\Memo.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationData\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,6 +113,21 @@
     </Compile>
     <Compile Include="avtorixahiya.xaml.cs">
       <DependentUpon>avtorixahiya.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="diapozon.xaml.cs">
+      <DependentUpon>diapozon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="memo.xaml.cs">
+      <DependentUpon>memo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="memo_4na4.xaml.cs">
+      <DependentUpon>memo_4na4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="memo_8na8.xaml.cs">
+      <DependentUpon>memo_8na8.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="memo_rekord_reg.xaml.cs">
+      <DependentUpon>memo_rekord_reg.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageSVoprosami\dialog_1.xaml.cs">
       <DependentUpon>dialog_1.xaml</DependentUpon>
@@ -293,17 +312,401 @@
     <Compile Include="PageSVoprosami\Vopros_1_History_of_the_IT_sphere.xaml.cs">
       <DependentUpon>Vopros_1_History_of_the_IT_sphere.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PageSVoprosami_3_k\dialog_1_3k.xaml.cs">
+      <DependentUpon>dialog_1_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Kot_v_Meshke_10_3k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_10_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Kot_v_Meshke_11_3k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_11_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Kot_v_Meshke_12_3k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_12_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Kot_v_Meshke_13_3k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_13_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Kot_v_Meshke_14_3k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_14_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Kot_v_Meshke_15_3k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_15_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Kot_v_Meshke_1_3k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_1_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Kot_v_Meshke_2_3k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_2_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Kot_v_Meshke_3_3k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_3_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Kot_v_Meshke_4_3k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_4_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Kot_v_Meshke_5_3k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_5_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Kot_v_Meshke_6_3k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_6_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Kot_v_Meshke_7_3k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_7_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Kot_v_Meshke_8_3k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_8_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Kot_v_Meshke_9_3k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_9_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_1_2_History_of_the_IT_sphere_3k.xaml.cs">
+      <DependentUpon>Vopros_1_2_History_of_the_IT_sphere_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_1_2_Voprosi_IT_3k.xaml.cs">
+      <DependentUpon>Vopros_1_2_Voprosi_IT_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_1_2_Voprosi_People_in_Programming_3k.xaml.cs">
+      <DependentUpon>Vopros_1_2_Voprosi_People_in_Programming_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_1_3_History_of_the_IT_sphere_3k.xaml.cs">
+      <DependentUpon>Vopros_1_3_History_of_the_IT_sphere_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_1_3_Voprosi_IT_3k.xaml.cs">
+      <DependentUpon>Vopros_1_3_Voprosi_IT_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_1_3_Voprosi_People_in_Programming_3k.xaml.cs">
+      <DependentUpon>Vopros_1_3_Voprosi_People_in_Programming_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_1_History_of_the_IT_sphere_3k.xaml.cs">
+      <DependentUpon>Vopros_1_History_of_the_IT_sphere_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_1_Voprosi_IT_3k.xaml.cs">
+      <DependentUpon>Vopros_1_Voprosi_IT_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_1_Voprosi_People_in_Programming_3k.xaml.cs">
+      <DependentUpon>Vopros_1_Voprosi_People_in_Programming_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_2_2_History_of_the_IT_sphere_3k.xaml.cs">
+      <DependentUpon>Vopros_2_2_History_of_the_IT_sphere_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_2_2_Voprosi_IT_3k.xaml.cs">
+      <DependentUpon>Vopros_2_2_Voprosi_IT_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_2_2_Voprosi_People_in_Programming_3k.xaml.cs">
+      <DependentUpon>Vopros_2_2_Voprosi_People_in_Programming_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_2_3_History_of_the_IT_sphere_3k.xaml.cs">
+      <DependentUpon>Vopros_2_3_History_of_the_IT_sphere_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_2_3_Voprosi_IT_3k.xaml.cs">
+      <DependentUpon>Vopros_2_3_Voprosi_IT_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_2_3_Voprosi_People_in_Programming_3k.xaml.cs">
+      <DependentUpon>Vopros_2_3_Voprosi_People_in_Programming_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_2_History_of_the_IT_sphere_3k.xaml.cs">
+      <DependentUpon>Vopros_2_History_of_the_IT_sphere_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_2_Voprosi_IT_3k.xaml.cs">
+      <DependentUpon>Vopros_2_Voprosi_IT_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_2_Voprosi_People_in_Programming_3k.xaml.cs">
+      <DependentUpon>Vopros_2_Voprosi_People_in_Programming_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_3_2_History_of_the_IT_sphere_3k.xaml.cs">
+      <DependentUpon>Vopros_3_2_History_of_the_IT_sphere_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_3_2_Voprosi_IT_3k.xaml.cs">
+      <DependentUpon>Vopros_3_2_Voprosi_IT_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_3_2_Voprosi_People_in_Programming_3k.xaml.cs">
+      <DependentUpon>Vopros_3_2_Voprosi_People_in_Programming_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_3_3_History_of_the_IT_sphere_3k.xaml.cs">
+      <DependentUpon>Vopros_3_3_History_of_the_IT_sphere_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_3_3_Voprosi_IT_3k.xaml.cs">
+      <DependentUpon>Vopros_3_3_Voprosi_IT_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_3_3_Voprosi_People_in_Programming_3k.xaml.cs">
+      <DependentUpon>Vopros_3_3_Voprosi_People_in_Programming_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_3_History_of_the_IT_sphere_3k.xaml.cs">
+      <DependentUpon>Vopros_3_History_of_the_IT_sphere_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_3_Voprosi_IT_3k.xaml.cs">
+      <DependentUpon>Vopros_3_Voprosi_IT_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_3_Voprosi_People_in_Programming_3k.xaml.cs">
+      <DependentUpon>Vopros_3_Voprosi_People_in_Programming_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_4_2_History_of_the_IT_sphere_3k.xaml.cs">
+      <DependentUpon>Vopros_4_2_History_of_the_IT_sphere_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_4_2_Voprosi_IT_3k.xaml.cs">
+      <DependentUpon>Vopros_4_2_Voprosi_IT_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_4_2_Voprosi_People_in_Programming_3k.xaml.cs">
+      <DependentUpon>Vopros_4_2_Voprosi_People_in_Programming_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_4_3_History_of_the_IT_sphere_3k.xaml.cs">
+      <DependentUpon>Vopros_4_3_History_of_the_IT_sphere_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_4_3_Voprosi_IT_3k.xaml.cs">
+      <DependentUpon>Vopros_4_3_Voprosi_IT_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_4_3_Voprosi_People_in_Programming_3k.xaml.cs">
+      <DependentUpon>Vopros_4_3_Voprosi_People_in_Programming_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_4_History_of_the_IT_sphere_3k.xaml.cs">
+      <DependentUpon>Vopros_4_History_of_the_IT_sphere_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_4_Voprosi_IT_3k.xaml.cs">
+      <DependentUpon>Vopros_4_Voprosi_IT_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_4_Voprosi_People_in_Programming_3k.xaml.cs">
+      <DependentUpon>Vopros_4_Voprosi_People_in_Programming_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_5_2_History_of_the_IT_sphere_3k.xaml.cs">
+      <DependentUpon>Vopros_5_2_History_of_the_IT_sphere_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_5_2_Voprosi_IT_3k.xaml.cs">
+      <DependentUpon>Vopros_5_2_Voprosi_IT_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_5_2_Voprosi_People_in_Programming_3k.xaml.cs">
+      <DependentUpon>Vopros_5_2_Voprosi_People_in_Programming_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_5_3_History_of_the_IT_sphere_3k.xaml.cs">
+      <DependentUpon>Vopros_5_3_History_of_the_IT_sphere_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_5_3_Voprosi_IT_3k.xaml.cs">
+      <DependentUpon>Vopros_5_3_Voprosi_IT_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_5_3_Voprosi_People_in_Programming_3k.xaml.cs">
+      <DependentUpon>Vopros_5_3_Voprosi_People_in_Programming_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_5_History_of_the_IT_sphere_3k.xaml.cs">
+      <DependentUpon>Vopros_5_History_of_the_IT_sphere_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_5_Voprosi_IT_3k.xaml.cs">
+      <DependentUpon>Vopros_5_Voprosi_IT_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_3_k\Vopros_5_Voprosi_People_in_Programming_3k.xaml.cs">
+      <DependentUpon>Vopros_5_Voprosi_People_in_Programming_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\dialog_1_4k.xaml.cs">
+      <DependentUpon>dialog_1_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Kot_v_Meshke_10_4k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_10_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Kot_v_Meshke_11_4k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_11_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Kot_v_Meshke_12_4k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_12_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Kot_v_Meshke_13_4k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_13_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Kot_v_Meshke_14_4k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_14_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Kot_v_Meshke_15_4k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_15_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Kot_v_Meshke_1_4k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_1_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Kot_v_Meshke_2_4k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_2_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Kot_v_Meshke_3_4k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_3_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Kot_v_Meshke_4_4k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_4_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Kot_v_Meshke_5_4k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_5_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Kot_v_Meshke_6_4k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_6_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Kot_v_Meshke_7_4k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_7_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Kot_v_Meshke_8_4k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_8_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Kot_v_Meshke_9_4k.xaml.cs">
+      <DependentUpon>Kot_v_Meshke_9_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_1_2_History_of_the_IT_sphere_4k.xaml.cs">
+      <DependentUpon>Vopros_1_2_History_of_the_IT_sphere_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_1_2_Voprosi_IT_4k.xaml.cs">
+      <DependentUpon>Vopros_1_2_Voprosi_IT_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_1_2_Voprosi_People_in_Programming_4k.xaml.cs">
+      <DependentUpon>Vopros_1_2_Voprosi_People_in_Programming_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_1_3_History_of_the_IT_sphere_4k.xaml.cs">
+      <DependentUpon>Vopros_1_3_History_of_the_IT_sphere_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_1_3_Voprosi_IT_4k.xaml.cs">
+      <DependentUpon>Vopros_1_3_Voprosi_IT_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_1_3_Voprosi_People_in_Programming_4k.xaml.cs">
+      <DependentUpon>Vopros_1_3_Voprosi_People_in_Programming_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_1_History_of_the_IT_sphere_4k.xaml.cs">
+      <DependentUpon>Vopros_1_History_of_the_IT_sphere_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_1_Voprosi_IT_4k.xaml.cs">
+      <DependentUpon>Vopros_1_Voprosi_IT_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_1_Voprosi_People_in_Programming_4k.xaml.cs">
+      <DependentUpon>Vopros_1_Voprosi_People_in_Programming_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_2_2_History_of_the_IT_sphere_4k.xaml.cs">
+      <DependentUpon>Vopros_2_2_History_of_the_IT_sphere_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_2_2_Voprosi_IT_4k.xaml.cs">
+      <DependentUpon>Vopros_2_2_Voprosi_IT_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_2_2_Voprosi_People_in_Programming_4k.xaml.cs">
+      <DependentUpon>Vopros_2_2_Voprosi_People_in_Programming_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_2_3_History_of_the_IT_sphere_4k.xaml.cs">
+      <DependentUpon>Vopros_2_3_History_of_the_IT_sphere_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_2_3_Voprosi_IT_4k.xaml.cs">
+      <DependentUpon>Vopros_2_3_Voprosi_IT_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_2_3_Voprosi_People_in_Programming_4k.xaml.cs">
+      <DependentUpon>Vopros_2_3_Voprosi_People_in_Programming_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_2_History_of_the_IT_sphere_4k.xaml.cs">
+      <DependentUpon>Vopros_2_History_of_the_IT_sphere_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_2_Voprosi_IT_4k.xaml.cs">
+      <DependentUpon>Vopros_2_Voprosi_IT_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_2_Voprosi_People_in_Programming_4k.xaml.cs">
+      <DependentUpon>Vopros_2_Voprosi_People_in_Programming_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_3_2_History_of_the_IT_sphere_4k.xaml.cs">
+      <DependentUpon>Vopros_3_2_History_of_the_IT_sphere_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_3_2_Voprosi_IT_4k.xaml.cs">
+      <DependentUpon>Vopros_3_2_Voprosi_IT_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_3_2_Voprosi_People_in_Programming_4k.xaml.cs">
+      <DependentUpon>Vopros_3_2_Voprosi_People_in_Programming_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_3_3_History_of_the_IT_sphere_4k.xaml.cs">
+      <DependentUpon>Vopros_3_3_History_of_the_IT_sphere_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_3_3_Voprosi_IT_4k.xaml.cs">
+      <DependentUpon>Vopros_3_3_Voprosi_IT_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_3_3_Voprosi_People_in_Programming_4k.xaml.cs">
+      <DependentUpon>Vopros_3_3_Voprosi_People_in_Programming_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_3_History_of_the_IT_sphere_4k.xaml.cs">
+      <DependentUpon>Vopros_3_History_of_the_IT_sphere_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_3_Voprosi_IT_4k.xaml.cs">
+      <DependentUpon>Vopros_3_Voprosi_IT_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_3_Voprosi_People_in_Programming_4k.xaml.cs">
+      <DependentUpon>Vopros_3_Voprosi_People_in_Programming_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_4_2_History_of_the_IT_sphere_4k.xaml.cs">
+      <DependentUpon>Vopros_4_2_History_of_the_IT_sphere_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_4_2_Voprosi_IT_4k.xaml.cs">
+      <DependentUpon>Vopros_4_2_Voprosi_IT_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_4_2_Voprosi_People_in_Programming_4k.xaml.cs">
+      <DependentUpon>Vopros_4_2_Voprosi_People_in_Programming_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_4_3_History_of_the_IT_sphere_4k.xaml.cs">
+      <DependentUpon>Vopros_4_3_History_of_the_IT_sphere_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_4_3_Voprosi_IT_4k.xaml.cs">
+      <DependentUpon>Vopros_4_3_Voprosi_IT_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_4_3_Voprosi_People_in_Programming_4k.xaml.cs">
+      <DependentUpon>Vopros_4_3_Voprosi_People_in_Programming_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_4_History_of_the_IT_sphere_4k.xaml.cs">
+      <DependentUpon>Vopros_4_History_of_the_IT_sphere_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_4_Voprosi_IT_4k.xaml.cs">
+      <DependentUpon>Vopros_4_Voprosi_IT_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_4_Voprosi_People_in_Programming_4k.xaml.cs">
+      <DependentUpon>Vopros_4_Voprosi_People_in_Programming_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_5_2_History_of_the_IT_sphere_4k.xaml.cs">
+      <DependentUpon>Vopros_5_2_History_of_the_IT_sphere_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_5_2_Voprosi_IT_4k.xaml.cs">
+      <DependentUpon>Vopros_5_2_Voprosi_IT_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_5_2_Voprosi_People_in_Programming_4k.xaml.cs">
+      <DependentUpon>Vopros_5_2_Voprosi_People_in_Programming_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_5_3_History_of_the_IT_sphere_4k.xaml.cs">
+      <DependentUpon>Vopros_5_3_History_of_the_IT_sphere_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_5_3_Voprosi_IT_4k.xaml.cs">
+      <DependentUpon>Vopros_5_3_Voprosi_IT_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_5_3_Voprosi_People_in_Programming_4k.xaml.cs">
+      <DependentUpon>Vopros_5_3_Voprosi_People_in_Programming_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_5_History_of_the_IT_sphere_4k.xaml.cs">
+      <DependentUpon>Vopros_5_History_of_the_IT_sphere_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_5_Voprosi_IT_4k.xaml.cs">
+      <DependentUpon>Vopros_5_Voprosi_IT_4k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageSVoprosami_4_k\Vopros_5_Voprosi_People_in_Programming_4k.xaml.cs">
+      <DependentUpon>Vopros_5_Voprosi_People_in_Programming_4k.xaml</DependentUpon>
+    </Compile>
     <Compile Include="rekordi.xaml.cs">
       <DependentUpon>rekordi.xaml</DependentUpon>
     </Compile>
     <Compile Include="rekordi_admin.xaml.cs">
       <DependentUpon>rekordi_admin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="rekord_memo.xaml.cs">
+      <DependentUpon>rekord_memo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="rekord_memo_admin.xaml.cs">
+      <DependentUpon>rekord_memo_admin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="rekord_reg.xaml.cs">
       <DependentUpon>rekord_reg.xaml</DependentUpon>
     </Compile>
+    <Compile Include="vibor_rekord.xaml.cs">
+      <DependentUpon>vibor_rekord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="vibor_rekord_admin.xaml.cs">
+      <DependentUpon>vibor_rekord_admin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Viktorina.xaml.cs">
       <DependentUpon>Viktorina.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Viktotina_3k.xaml.cs">
+      <DependentUpon>Viktotina_3k.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Viktotina_4k.xaml.cs">
+      <DependentUpon>Viktotina_4k.xaml</DependentUpon>
     </Compile>
     <Compile Include="win_draw.xaml.cs">
       <DependentUpon>win_draw.xaml</DependentUpon>
@@ -314,7 +717,17 @@
     <Compile Include="win_k_2.xaml.cs">
       <DependentUpon>win_k_2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="win_k_3.xaml.cs">
+      <DependentUpon>win_k_3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="win_k_4.xaml.cs">
+      <DependentUpon>win_k_4.xaml</DependentUpon>
+    </Compile>
     <Page Include="avtorixahiya.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="diapozon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -330,6 +743,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="memo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="memo_4na4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="memo_8na8.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="memo_rekord_reg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageSVoprosami\dialog_1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -574,11 +1003,507 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PageSVoprosami_3_k\dialog_1_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Kot_v_Meshke_10_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Kot_v_Meshke_11_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Kot_v_Meshke_12_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Kot_v_Meshke_13_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Kot_v_Meshke_14_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Kot_v_Meshke_15_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Kot_v_Meshke_1_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Kot_v_Meshke_2_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Kot_v_Meshke_3_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Kot_v_Meshke_4_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Kot_v_Meshke_5_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Kot_v_Meshke_6_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Kot_v_Meshke_7_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Kot_v_Meshke_8_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Kot_v_Meshke_9_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_1_2_History_of_the_IT_sphere_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_1_2_Voprosi_IT_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_1_2_Voprosi_People_in_Programming_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_1_3_History_of_the_IT_sphere_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_1_3_Voprosi_IT_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_1_3_Voprosi_People_in_Programming_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_1_History_of_the_IT_sphere_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_1_Voprosi_IT_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_1_Voprosi_People_in_Programming_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_2_2_History_of_the_IT_sphere_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_2_2_Voprosi_IT_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_2_2_Voprosi_People_in_Programming_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_2_3_History_of_the_IT_sphere_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_2_3_Voprosi_IT_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_2_3_Voprosi_People_in_Programming_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_2_History_of_the_IT_sphere_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_2_Voprosi_IT_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_2_Voprosi_People_in_Programming_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_3_2_History_of_the_IT_sphere_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_3_2_Voprosi_IT_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_3_2_Voprosi_People_in_Programming_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_3_3_History_of_the_IT_sphere_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_3_3_Voprosi_IT_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_3_3_Voprosi_People_in_Programming_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_3_History_of_the_IT_sphere_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_3_Voprosi_IT_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_3_Voprosi_People_in_Programming_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_4_2_History_of_the_IT_sphere_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_4_2_Voprosi_IT_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_4_2_Voprosi_People_in_Programming_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_4_3_History_of_the_IT_sphere_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_4_3_Voprosi_IT_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_4_3_Voprosi_People_in_Programming_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_4_History_of_the_IT_sphere_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_4_Voprosi_IT_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_4_Voprosi_People_in_Programming_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_5_2_History_of_the_IT_sphere_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_5_2_Voprosi_IT_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_5_2_Voprosi_People_in_Programming_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_5_3_History_of_the_IT_sphere_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_5_3_Voprosi_IT_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_5_3_Voprosi_People_in_Programming_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_5_History_of_the_IT_sphere_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_5_Voprosi_IT_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_3_k\Vopros_5_Voprosi_People_in_Programming_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\dialog_1_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Kot_v_Meshke_10_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Kot_v_Meshke_11_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Kot_v_Meshke_12_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Kot_v_Meshke_13_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Kot_v_Meshke_14_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Kot_v_Meshke_15_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Kot_v_Meshke_1_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Kot_v_Meshke_2_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Kot_v_Meshke_3_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Kot_v_Meshke_4_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Kot_v_Meshke_5_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Kot_v_Meshke_6_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Kot_v_Meshke_7_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Kot_v_Meshke_8_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Kot_v_Meshke_9_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_1_2_History_of_the_IT_sphere_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_1_2_Voprosi_IT_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_1_2_Voprosi_People_in_Programming_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_1_3_History_of_the_IT_sphere_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_1_3_Voprosi_IT_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_1_3_Voprosi_People_in_Programming_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_1_History_of_the_IT_sphere_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_1_Voprosi_IT_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_1_Voprosi_People_in_Programming_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_2_2_History_of_the_IT_sphere_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_2_2_Voprosi_IT_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_2_2_Voprosi_People_in_Programming_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_2_3_History_of_the_IT_sphere_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_2_3_Voprosi_IT_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_2_3_Voprosi_People_in_Programming_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_2_History_of_the_IT_sphere_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_2_Voprosi_IT_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_2_Voprosi_People_in_Programming_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_3_2_History_of_the_IT_sphere_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_3_2_Voprosi_IT_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_3_2_Voprosi_People_in_Programming_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_3_3_History_of_the_IT_sphere_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_3_3_Voprosi_IT_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_3_3_Voprosi_People_in_Programming_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_3_History_of_the_IT_sphere_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_3_Voprosi_IT_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_3_Voprosi_People_in_Programming_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_4_2_History_of_the_IT_sphere_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_4_2_Voprosi_IT_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_4_2_Voprosi_People_in_Programming_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_4_3_History_of_the_IT_sphere_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_4_3_Voprosi_IT_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_4_3_Voprosi_People_in_Programming_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_4_History_of_the_IT_sphere_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_4_Voprosi_IT_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_4_Voprosi_People_in_Programming_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_5_2_History_of_the_IT_sphere_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_5_2_Voprosi_IT_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_5_2_Voprosi_People_in_Programming_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_5_3_History_of_the_IT_sphere_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_5_3_Voprosi_IT_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_5_3_Voprosi_People_in_Programming_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_5_History_of_the_IT_sphere_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_5_Voprosi_IT_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSVoprosami_4_k\Vopros_5_Voprosi_People_in_Programming_4k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="rekordi.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="rekordi_admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="rekord_memo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="rekord_memo_admin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -590,7 +1515,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="vibor_rekord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="vibor_rekord_admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Viktorina.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Viktotina_3k.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Viktotina_4k.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -603,6 +1544,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="win_k_2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="win_k_3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="win_k_4.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -641,6 +1590,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Resource Include="Resource\font\PIXELEUM-48.TTF" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -650,16 +1600,91 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="515260f77ed2715dfe80964e45923833.ico" />
-    <Resource Include="PageSVoprosami\fon_3.png" />
-    <Resource Include="PageSVoprosami\fon_5.jpg" />
-    <Resource Include="Resource\fon_2.jpg" />
     <Resource Include="Resource\fon.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PageSVoprosami\fon_4.png" />
+    <Resource Include="Resource\win.gif" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resource\win.gif" />
+    <Resource Include="Resource\while.png" />
+    <Resource Include="Resource\boll.png" />
+    <Resource Include="Resource\uint.png" />
+    <Resource Include="Resource\1C.png" />
+    <Resource Include="Resource\byte.png" />
+    <Resource Include="Resource\C++.png" />
+    <Resource Include="Resource\char.png" />
+    <Resource Include="Resource\do.png" />
+    <Resource Include="Resource\false.png" />
+    <Resource Include="Resource\for.png" />
+    <Resource Include="Resource\java.png" />
+    <Resource Include="Resource\js.png" />
+    <Resource Include="Resource\long.png" />
+    <Resource Include="Resource\null.png" />
+    <Resource Include="Resource\php.png" />
+    <Resource Include="Resource\sbyte.png" />
+    <Resource Include="Resource\sql.png" />
+    <Resource Include="Resource\true.png" />
+    <Resource Include="Resource\ulong.png" />
+    <Resource Include="Resource\unit.png" />
+    <Resource Include="Resource\var.png" />
+    <Resource Include="Resource\else.png" />
+    <Resource Include="Resource\Grid.png" />
+    <Resource Include="Resource\if.png" />
+    <Resource Include="Resource\int.png" />
+    <Resource Include="Resource\mode.png" />
+    <Resource Include="Resource\value.png" />
+    <Resource Include="Resource\void.png" />
+    <Resource Include="Resource\xaml.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\fon_Hist.png" />
+    <Resource Include="Resource\fon_IT.png" />
+    <Resource Include="Resource\fon_kot.png" />
+    <Resource Include="Resource\fon_Peple.png" />
+    <Resource Include="Resource\fon_111.png" />
+    <Resource Include="Resource\cat_v_meshke.png" />
+    <Resource Include="Resource\fon_it.jpg" />
+    <Resource Include="Resource\history.jpg" />
+    <Resource Include="Resource\peple.png" />
+    <Resource Include="Resource\win.png" />
+    <Resource Include="Resource\minys.png" />
+    <Resource Include="Resource\fon_d.jpg" />
+    <Resource Include="Resource\play.png" />
+    <Resource Include="Resource\knopka_2.png" />
+    <Resource Include="Resource\knopka.png" />
+    <Resource Include="Resource\fon_v.png" />
+    <Resource Include="Resource\fob_v.jpg" />
+    <Resource Include="Resource\DSpag12e1i0.jpg" />
+    <Resource Include="Resource\text_2.png" />
+    <Resource Include="Resource\text_3.png" />
+    <Resource Include="Resource\text_4.png" />
+    <Resource Include="Resource\voiti.png" />
+    <Resource Include="Resource\fon_rekord_1.png" />
+    <Resource Include="Resource\save.png" />
+    <Resource Include="Resource\parasha.png" />
+    <Resource Include="Resource\plys.png" />
+    <Resource Include="Resource\red.png" />
+    <Resource Include="Resource\date.png" />
+    <Resource Include="Resource\NET.png" />
+    <Resource Include="Resource\C.png" />
+    <Resource Include="Resource\f.png" />
+    <Resource Include="Resource\white.png" />
+    <Resource Include="Resource\memo_fon.png" />
+    <Resource Include="Resource\text_1.png" />
+    <Resource Include="Resource\fon_rekord.png" />
+    <Resource Include="Resource\fon_22.png" />
+    <Resource Include="Resource\2x2.png" />
+    <Resource Include="Resource\4x4.png" />
+    <Resource Include="Resource\8x8.png" />
+    <Resource Include="Resource\fon_11.jpg" />
+    <Resource Include="Resource\text.png" />
+    <Resource Include="Resource\rekord.png" />
+    <Resource Include="Resource\fon_start.png" />
+    <Resource Include="Resource\memo.png" />
+    <Resource Include="Resource\nazad.png" />
+    <Resource Include="Resource\o_prilojenii.png" />
+    <Resource Include="Resource\viktorina.png" />
+    <Resource Include="Resource\vixod.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ApplicationData\Model1.Context.tt">

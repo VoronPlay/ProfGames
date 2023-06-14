@@ -28,7 +28,7 @@ namespace ProfGames
         }
         private void nazad_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MainFrame.Navigate(new StartPage());
+            Manager.MainFrame.Navigate(new vibor_rekord());
         }
     }
 }

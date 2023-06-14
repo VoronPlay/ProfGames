@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ProfGames"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="700" d:DesignWidth="1100"
       Title="rekord_reg" Background="White">
     <Page.Resources>
         <Style TargetType="Label" x:Key="Label">
@@ -16,13 +16,48 @@
         <Style TargetType="TextBlock" x:Key="TextBlock">
             <Setter Property="Height" Value="30"/>
             <Setter Property="Width" Value="300"/>
-            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Margin" Value="5,5,-80,5"/>
+            <Setter Property="FontSize" Value="18pt"/>
+            <Setter Property="Foreground" Value="Red"/>
+            <Setter Property="FontWeight" Value="Bold"/>
         </Style>
         <Style TargetType="TextBox" x:Key="TextBox">
             <Setter Property="Height" Value="40"/>
             <Setter Property="Width" Value="300"/>
-            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Margin" Value="100,5,5,5"/>
+            <Setter Property="FontSize" Value="18pt"/>
             <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border Background="{TemplateBinding Background}"    
+      x:Name="Bd" BorderBrush="Black"   
+      BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>
+                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="Width" Value="Auto">
+                                <Setter Property="MinWidth" Value="100"/>
+                            </Trigger>
+                            <Trigger Property="Height" Value="Auto">
+                                <Setter Property="MinHeight" Value="20"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="Red"></Setter>
+                                <Setter TargetName="Bd" Property="BorderThickness" Value="3"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="DarkOrange"></Setter>
+                                <Setter TargetName="Bd" Property="BorderThickness" Value="2"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
         <Style TargetType="ComboBox" x:Key="ComboBox">
             <Setter Property="Height" Value="40"/>
@@ -33,7 +68,7 @@
     </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="230"/>
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -42,15 +77,94 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Название команды 1" Grid.Row="0" Style="{StaticResource TextBlock}"/>
-        <TextBlock Text="Очки команды 1" Grid.Row="1" Style="{StaticResource TextBlock}"/>
-        <TextBlock Text="Название команды 2" Grid.Row="2" Style="{StaticResource TextBlock}"/>
-        <TextBlock Text="Очки команды 2" Grid.Row="3" Style="{StaticResource TextBlock}"/>
-        <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource TextBox}" x:Name="t1" MaxLength="50" Text="{Binding komanda_1}"/>
-        <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource TextBox}" x:Name="t2" Text="{Binding ohko_k_1}"/>
-        <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource TextBox}" x:Name="t3" Text="{Binding komanda_2}"/>
-        <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource TextBox}" x:Name="t4" Text="{Binding ohko_k_2}"/>
-        <Button Grid.Row="5" Grid.ColumnSpan="2" Content="Сохранить" Name="btnSave" Click="btnSave_Click" Style="{StaticResource ButtonY}"/>
+        <Image Source="Resource/fon_rekord_1.png" Grid.Column="0" Grid.Row="0" Grid.RowSpan="9" Grid.ColumnSpan="5" Height="2000" Width="2000" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Text="Название команды 1" Grid.Row="0" FontSize="24" Style="{StaticResource TextBlock}" FontFamily="{StaticResource pix}">
+            <TextBlock.Effect>
+                <DropShadowEffect
+      ShadowDepth="2"
+      Direction="330"
+      Color="Black"
+     BlurRadius="0"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock Text="Очки команды 1" Grid.Row="1" Style="{StaticResource TextBlock}" FontFamily="{StaticResource pix}">
+            <TextBlock.Effect>
+                <DropShadowEffect
+      ShadowDepth="2"
+      Direction="330"
+      Color="Black"
+     BlurRadius="0"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock Text="Название команды 2" Grid.Row="2" Style="{StaticResource TextBlock}" FontFamily="{StaticResource pix}">
+            <TextBlock.Effect>
+                <DropShadowEffect
+      ShadowDepth="2"
+      Direction="330"
+      Color="Black"
+     BlurRadius="0"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock Text="Очки команды 2" Grid.Row="3" Style="{StaticResource TextBlock}" FontFamily="{StaticResource pix}">
+            <TextBlock.Effect>
+                <DropShadowEffect
+      ShadowDepth="2"
+      Direction="330"
+      Color="Black"
+     BlurRadius="0"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock Text="Название команды 3" Grid.Row="4" Style="{StaticResource TextBlock}" FontFamily="{StaticResource pix}">
+            <TextBlock.Effect>
+                <DropShadowEffect
+      ShadowDepth="2"
+      Direction="330"
+      Color="Black"
+     BlurRadius="0"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock Text="Очки команды 3" Grid.Row="5" Style="{StaticResource TextBlock}" FontFamily="{StaticResource pix}">
+            <TextBlock.Effect>
+                <DropShadowEffect
+      ShadowDepth="2"
+      Direction="330"
+      Color="Black"
+     BlurRadius="0"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock Text="Название команды 4" Grid.Row="6" Style="{StaticResource TextBlock}" FontFamily="{StaticResource pix}">
+            <TextBlock.Effect>
+                <DropShadowEffect
+      ShadowDepth="2"
+      Direction="330"
+      Color="Black"
+     BlurRadius="0"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock Text="Очки команды 4" Grid.Row="7" Style="{StaticResource TextBlock}" FontFamily="{StaticResource pix}">
+            <TextBlock.Effect>
+                <DropShadowEffect
+      ShadowDepth="2"
+      Direction="330"
+      Color="Black"
+     BlurRadius="0"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource TextBox}" x:Name="naz_1" MaxLength="50" Text="{Binding komanda_1}"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource TextBox}" x:Name="o_1" Text="{Binding ohko_k_1}"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource TextBox}" x:Name="naz_2" Text="{Binding komanda_2}"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource TextBox}" x:Name="o_2" Text="{Binding ohko_k_2}"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource TextBox}" x:Name="naz_3" Text="{Binding komanda_3}"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Style="{StaticResource TextBox}" x:Name="o_3" Text="{Binding ohko_k_3}"/>
+        <TextBox Grid.Row="6" Grid.Column="1" Style="{StaticResource TextBox}" x:Name="naz_4" Text="{Binding komanda_4}"/>
+        <TextBox Grid.Row="7" Grid.Column="1" Style="{StaticResource TextBox}" x:Name="o_4" Text="{Binding ohko_k_4}"/>
+        <Button Grid.Row="8" Grid.ColumnSpan="2" Style="{StaticResource MyButtonStyle}" Name="btnSave" Click="btnSave_Click">
+            <Image Source="Resource/save.png"/>
+        </Button>
     </Grid>
 </Page>

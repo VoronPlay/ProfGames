@@ -1,0 +1,71 @@
+﻿<Page x:Class="ProfGames.PageSVoprosami_4_k.dialog_1_4k"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProfGames.PageSVoprosami_4_k"
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="1300"
+      Title="dialog_1_4k" Background="White">
+
+    <Grid>
+        <Image Source="/Resource/fon_d.jpg"  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="30" Width="2000" Height="2000" Grid.RowSpan="30"/>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Напишите название команды 1" FontFamily="{StaticResource pix}" FontSize="48"   Margin="20,20,20,20" Foreground="Red">
+                <TextBlock.Effect>
+                    <DropShadowEffect
+      ShadowDepth="4"
+      Direction="330"
+      Color="Black"
+      Opacity="1"
+     BlurRadius="4"/>
+                </TextBlock.Effect>
+            </TextBlock>
+            <TextBox x:Name="komanda_1" Text="" FontSize="30" Width="365" Height="80" Style="{StaticResource roundcornerTextboxwithbordereffect}" FontFamily="{StaticResource pix}"></TextBox>
+            <TextBlock Text="Напишите название команды 2" FontFamily="{StaticResource pix}"  FontSize="48" Foreground="Red"  Margin="20,20,20,20">
+                <TextBlock.Effect>
+                    <DropShadowEffect
+      ShadowDepth="4"
+      Direction="330"
+      Color="Black"
+      Opacity="1"
+     BlurRadius="4"/>
+                </TextBlock.Effect>
+            </TextBlock>
+            <TextBox x:Name="komanda_2" FontSize="30" Width="365" Height="80" Style="{StaticResource roundcornerTextboxwithbordereffect}" Text=""  FontFamily="{StaticResource pix}"></TextBox>
+            <TextBlock Text="Напишите название команды 3" FontFamily="{StaticResource pix}" FontSize="48" Foreground="Red"  Margin="20,20,20,20">
+                <TextBlock.Effect>
+                    <DropShadowEffect
+      ShadowDepth="4"
+      Direction="330"
+      Color="Black"
+      Opacity="1"
+     BlurRadius="4"/>
+                </TextBlock.Effect>
+            </TextBlock>
+            <TextBox x:Name="komanda_3"  Text="" FontSize="30" Width="365" Height="80" Style="{StaticResource roundcornerTextboxwithbordereffect}" FontFamily="{StaticResource pix}"></TextBox>
+            <TextBlock Text="Напишите название команды 4" FontFamily="{StaticResource pix}" FontSize="48" Foreground="Red"  Margin="20,20,20,20">
+                <TextBlock.Effect>
+                    <DropShadowEffect
+      ShadowDepth="4"
+      Direction="330"
+      Color="Black"
+      Opacity="1"
+     BlurRadius="4"/>
+                </TextBlock.Effect>
+            </TextBlock>
+            <TextBox x:Name="komanda_4" FontSize="30" Width="365" Height="80" Style="{StaticResource roundcornerTextboxwithbordereffect}" Text=""  FontFamily="{StaticResource pix}"></TextBox>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                <Button x:Name="nazvati" Click="nazvati_Click" Height="100" Width="100" Margin="20,20,20,20" Style="{StaticResource MyButtonStyle}">
+                    <Image Source="/Resource/play.png"/>
+                </Button>
+                <Button x:Name="delete" Click="delete_Click"  Height="100" Width="100" Margin="20,20,20,20" Style="{StaticResource MyButtonStyle}">
+                    <Image Source="/Resource/minys.png"/>
+                </Button>
+                <Button x:Name="nazad" Click="nazad_Click"  Height="100" Margin="20,20,20,20" Width="100" Style="{StaticResource MyButtonStyle}">
+                    <Image Source="/Resource/nazad.png"/>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

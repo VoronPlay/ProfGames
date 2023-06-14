@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ProfGames"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="700" d:DesignWidth="1100"
       Title="rekordi_admin" Background="White" IsVisibleChanged="Page_IsVisibleChanged">
 
     <Grid>
@@ -16,23 +16,35 @@
 
         <DataGrid x:Name="DtGrid" AutoGenerateColumns="False" IsEnabled="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Команда 1" Binding="{Binding komanda_1}" Width="25*"></DataGridTextColumn>
-                <DataGridTextColumn Header="Очки команды 1" Binding="{Binding ohko_k_1}" Width="25*"/>
-                <DataGridTextColumn Header="Команда 2" Binding="{Binding komanda_2}" Width="25*"/>
-                <DataGridTextColumn Header="Очки команды 2" Binding="{Binding ohko_k_2}" Width="25*"/>
-                <DataGridTemplateColumn Width="auto">
+                <DataGridTextColumn Header="Команда 1" FontSize="30" Binding="{Binding komanda_1}" FontFamily="{StaticResource pix}" Width="25*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Очки команды 1" FontSize="30" Binding="{Binding ohko_k_1}" FontFamily="{StaticResource pix}" Width="30*"/>
+                <DataGridTextColumn Header="Команда 2" FontSize="30" Binding="{Binding komanda_2}" FontFamily="{StaticResource pix}" Width="25*"/>
+                <DataGridTextColumn Header="Очки команды 2" FontSize="30" Binding="{Binding ohko_k_2}" FontFamily="{StaticResource pix}" Width="30*"/>
+                <DataGridTextColumn FontSize="30" Header="Команда 3" Binding="{Binding komanda_3}" FontFamily="{StaticResource pix}" Width="25*"/>
+                <DataGridTextColumn FontSize="30" Header="Очки команды 3" Binding="{Binding ohko_k_3}" FontFamily="{StaticResource pix}" Width="30*"/>
+                <DataGridTextColumn FontSize="30" Header="Команда 4" Binding="{Binding komanda_4}" FontFamily="{StaticResource pix}" Width="25*"/>
+                <DataGridTextColumn FontSize="30" Header="Очки команды 4" Binding="{Binding ohko_k_4}" FontFamily="{StaticResource pix}" Width="30*"/>
+                <DataGridTemplateColumn Width="30*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Style="{StaticResource ButtonB}" Content="Редактировать" Name="BtnEdit" Click="BtnEdit_Click"></Button>
+                            <Button Style="{StaticResource MyButtonStyle}" Name="BtnEdit" Click="BtnEdit_Click">
+                                <Image Source="Resource/red.png"/>
+                            </Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="Удалить" Name="btnDel" Click="btnDel_Click" Style="{StaticResource ButtonG}"/>
-            <Button Content="Назад" Name="nazad" Click="nazad_Click" Style="{StaticResource ButtonY}"/>
-            <Button Content="Добавить" Name="add" Click="add_Click" Style="{StaticResource ButtonY}"/>
+            <Button Name="btnDel" Click="btnDel_Click" Style="{StaticResource MyButtonStyle}">
+                <Image Source="Resource/parasha.png"/>
+            </Button>
+            <Button Name="nazad" Click="nazad_Click" Style="{StaticResource MyButtonStyle}">
+                <Image Source="Resource/nazad.png"/>
+            </Button>
+            <Button Name="add" Click="add_Click" Style="{StaticResource MyButtonStyle}">
+                <Image Source="Resource/plys.png"/>
+            </Button>
         </StackPanel>
     </Grid>
 </Page>

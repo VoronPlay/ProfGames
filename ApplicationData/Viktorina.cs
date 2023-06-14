@@ -20,7 +20,9 @@ namespace ProfGames.ApplicationData
         public int Kot_v_Meshke { get; set; }
         public int User { get; set; }
         public int Rekordi { get; set; }
+        public int Memo { get; set; }
     
+        public virtual Memo Memo1 { get; set; }
         public virtual Rekordi Rekordi1 { get; set; }
         public virtual User User1 { get; set; }
         public virtual Voprosi_History_of_the_IT_sphere Voprosi_History_of_the_IT_sphere { get; set; }

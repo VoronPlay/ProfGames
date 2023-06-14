@@ -17,11 +17,6 @@ namespace ProfGames.ApplicationData
     {
         private static ProfGamesEntities _context;
 
-        public ProfGamesEntities()
-            : base("name=ProfGamesEntities")
-        {
-        }
-
         public static ProfGamesEntities GetContext()
         {
             if (_context == null)
@@ -29,11 +24,17 @@ namespace ProfGames.ApplicationData
             return _context;
         }
 
+        public ProfGamesEntities()
+            : base("name=ProfGamesEntities")
+        {
+        }
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Memo> Memo { get; set; }
         public virtual DbSet<Rekordi> Rekordi { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<User> User { get; set; }

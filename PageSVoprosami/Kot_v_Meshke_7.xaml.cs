@@ -32,6 +32,9 @@ namespace ProfGames.PageSVoprosami
             if ((bool)Chek_1.IsChecked)
             {
                 Text_1.Background = Brushes.Red;
+                K_0.Background = Brushes.Red;
+                K_0.Foreground = Brushes.Black;
+                K_0.Content = "0";
             }
             if ((bool)Chek_2.IsChecked)
             {
@@ -40,27 +43,33 @@ namespace ProfGames.PageSVoprosami
             if ((bool)Chek_3.IsChecked)
             {
                 Text_3.Background = Brushes.Red;
+                K_0.Background = Brushes.Red;
+                K_0.Foreground = Brushes.Black;
+                K_0.Content = "0";
             }
             if ((bool)Chek_4.IsChecked)
             {
                 Text_4.Background = Brushes.Red;
+                K_0.Background = Brushes.Red;
+                K_0.Foreground = Brushes.Black;
+                K_0.Content = "0";
             }
 
             if ((bool)Chek_1.IsChecked)
             {
-                TOtvet.Foreground = Brushes.DarkBlue;
+                TOtvet.Foreground = Brushes.Aqua;
             }
             else if ((bool)Chek_2.IsChecked)
             {
-                TOtvet.Foreground = Brushes.DarkBlue;
+                TOtvet.Foreground = Brushes.Aqua;
             }
             else if ((bool)Chek_3.IsChecked)
             {
-                TOtvet.Foreground = Brushes.DarkBlue;
+                TOtvet.Foreground = Brushes.Aqua;
             }
             else if ((bool)Chek_4.IsChecked)
             {
-                TOtvet.Foreground = Brushes.DarkBlue;
+                TOtvet.Foreground = Brushes.Aqua;
             }
             else
             {
@@ -147,6 +156,11 @@ namespace ProfGames.PageSVoprosami
                 MessageBox.Show("Выберите ответ");
             }
         }
-    
-}
+        private void K_0_Click(object sender, RoutedEventArgs e)
+        {
+            test7.Value = test7.Value + 1;
+            Manager.MainFrame.Navigate(new Viktorina());
+        }
+
+    }
 }

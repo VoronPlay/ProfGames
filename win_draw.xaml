@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ProfGames"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="700" d:DesignWidth="1100"
       Title="win_draw" Background="White">
     <Grid>
             <Grid.ColumnDefinitions>
@@ -17,9 +17,21 @@
                 <RowDefinition Height="20*"/>
                 <RowDefinition Height="30*"/>
             </Grid.RowDefinitions>
-        <StackPanel Grid.Row="1" Grid.ColumnSpan="2">
-            <Label x:Name="win" HorizontalContentAlignment="Center" FontSize="34" Content="Победила дружба"/>
-            <Button x:Name="nazad" Click="nazad_Click" HorizontalContentAlignment="Center" FontSize="34" Content="Выйти" Height="50" Width="200"/>
+        <Image Source="Resource/win.png" Grid.Column="0" Grid.Row="0" Grid.RowSpan="5" Grid.ColumnSpan="7" Height="2000" Width="2000" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Margin="0,0,0,88" Grid.RowSpan="2">
+            <TextBlock x:Name="win" HorizontalAlignment="Center" Text="Победила дружба" FontFamily="{StaticResource pix}" FontSize="40" Foreground="Red">
+                <TextBlock.Effect>
+                    <DropShadowEffect
+      ShadowDepth="4"
+      Direction="330"
+      Color="Black"
+      Opacity="1"
+     BlurRadius="4"/>
+                </TextBlock.Effect>
+            </TextBlock>
+            <Button x:Name="nazad" Click="nazad_Click" HorizontalContentAlignment="Center" Style="{StaticResource MyButtonStyle}" Height="110" Width="110">
+                <Image Source="Resource/nazad.png" Height="100" Width="100"/>
+            </Button>
         </StackPanel>
     </Grid>
 </Page>

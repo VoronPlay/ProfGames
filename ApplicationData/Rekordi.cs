@@ -23,8 +23,12 @@ namespace ProfGames.ApplicationData
         public int id { get; set; }
         public string komanda_1 { get; set; }
         public string komanda_2 { get; set; }
-        public int ohko_k_1 { get; set; }
-        public int ohko_k_2 { get; set; }
+        public Nullable<int> ohko_k_1 { get; set; }
+        public Nullable<int> ohko_k_2 { get; set; }
+        public string komanda_3 { get; set; }
+        public string komanda_4 { get; set; }
+        public Nullable<int> ohko_k_3 { get; set; }
+        public Nullable<int> ohko_k_4 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Viktorina> Viktorina { get; set; }

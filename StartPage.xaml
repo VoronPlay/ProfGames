@@ -5,52 +5,40 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ProfGames"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="700" d:DesignWidth="1100"
       Title="StartPage" Background="White">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="15*"/>
-            <ColumnDefinition Width="70*"/>
-            <ColumnDefinition Width="180*"/>
-            <ColumnDefinition Width="25*"/>
-            <ColumnDefinition Width="230*"/>
-            <ColumnDefinition Width="25*"/>
-            <ColumnDefinition Width="180*"/>
-            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="69*"/>
+            <ColumnDefinition Width="178*"/>
+            <ColumnDefinition Width="277*"/>
+            <ColumnDefinition Width="178*"/>
+            <ColumnDefinition Width="69*"/>
             <ColumnDefinition Width="15*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="15*"/>
-            <RowDefinition Height="80*"/>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="200*"/>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="70*"/>
-            <RowDefinition Height="20*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="180*"/>
+            <RowDefinition Height="67*"/>
+            <RowDefinition Height="166*"/>
+            <RowDefinition Height="21*"/>
         </Grid.RowDefinitions>
-        <Image Source="Resource/fon_2.jpg" Width="2000" Height="2000" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="30" Grid.RowSpan="30"/>
-        <Button Style="{StaticResource  Button_2}" x:Name="Viktorina" Click="Viktorina_Click" Grid.Column="2" Grid.Row="1" Grid.RowSpan="1" Grid.ColumnSpan="1">
-            <TextBlock TextAlignment="Center" FontSize="20"> Викторина <LineBreak/> Своя игра</TextBlock>
+        <Image Source="Resource/fon_start.png" Grid.Column="0" Grid.Row="0" Grid.RowSpan="5" Grid.ColumnSpan="7" Height="2000" Width="2000" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button Style="{StaticResource MyButtonStyle}" x:Name="Viktorina" Click="Viktorina_Click" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="1" Margin="5,5,5,5">
+            <Image Source="Resource/viktorina.png"/>
         </Button>
-        <Button Style="{StaticResource  Button_2}" Grid.Column="6" Grid.Row="1" Grid.RowSpan="1" Grid.ColumnSpan="1">
-            <TextBlock TextAlignment="Center" FontSize="20"> Игра собери код <LineBreak/>программы</TextBlock>
+        <Button Style="{StaticResource MyButtonStyle}" Grid.Column="4" Grid.Row="1" x:Name="memo" Click="memo_Click" Margin="5,5,5,5">
+            <Image Source="Resource/memo.png"/>
         </Button>
-        <Button Style="{StaticResource  Button_2}" Grid.Column="6" x:Name="Rekordi" Click="Rekordi_Click" Grid.Row="5" Grid.RowSpan="1" Grid.ColumnSpan="2">
-            <TextBlock TextAlignment="Center" FontSize="20">Рекорды</TextBlock>
+        <Button Style="{StaticResource MyButtonStyle}" Grid.Column="4" x:Name="Rekordi" Click="Rekordi_Click" Grid.Row="3" Grid.ColumnSpan="2" Margin="5,5,5,5">
+            <Image Source="Resource/rekord.png"/>
         </Button>
-        <Button Style="{StaticResource  Button_2}" x:Name="Vixod" Click="Vixod_Click" Grid.Column="4" Grid.Row="5" Grid.RowSpan="1" Grid.ColumnSpan="1">
-            <TextBlock TextAlignment="Center" FontSize="20">Вывод</TextBlock>
+        <Button Style="{StaticResource MyButtonStyle}" x:Name="Vixod" Click="Vixod_Click" Grid.Column="3" Grid.Row="3" Margin="5,5,5,5" >
+            <Image Source="Resource/vixod.png"/>
         </Button>
-        <Button Style="{StaticResource  Button_2}" x:Name="info" Click="info_Click" Grid.Column="1" Grid.Row="5" Grid.RowSpan="1" Grid.ColumnSpan="2">
-            <TextBlock TextAlignment="Center" FontSize="20">О приложении</TextBlock>
+        <Button Style="{StaticResource MyButtonStyle}" x:Name="info" Click="info_Click" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Margin="5,5,5,5">
+            <Image Source="Resource/o_prilojenii.png"/>
         </Button>
-        <TextBlock Foreground="LightBlue" FontWeight="Bold"  Grid.Column="1" Grid.Row="3" Grid.RowSpan="1" Grid.ColumnSpan="7" FontSize="20" HorizontalAlignment="Center" TextAlignment="Center">
-            <LineBreak/> Приветствую тебя дорогой пользователь
-           <LineBreak/>, наверное, ты сюда зашёл что бы узнать что-то новое,
-           <LineBreak/> или расширить свой кругозор в сфере IT
-           <LineBreak/> тогда это приложение для тебя
-           <LineBreak/> тут ты можешь пройти викторину узнать по больше об IT-сфере,
-           <LineBreak/> или почувствовать тебя программистом и собрать свою первую программу.
-        </TextBlock>
     </Grid>
 </Page>

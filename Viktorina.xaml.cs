@@ -3,6 +3,7 @@ using ProfGames.PageSVoprosami;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,13 +25,13 @@ namespace ProfGames
     /// </summary
     public partial class Viktorina : Page
     {
-        
+        private Rekordi _current = new Rekordi();
 
         public Viktorina()
         {
             InitializeComponent();
 
-            DataContext = _current;
+            
 
             if (ohko_1.Value == null)
             {
@@ -129,94 +130,96 @@ namespace ProfGames
             naz_1.Text = text_1.Value.ToString();
             naz_2.Text = text_2.Value.ToString();
 
+            Style style = this.FindResource("Button_red") as Style;
+
             double y_1 = double.Parse(test_1.Text);
             if (y_1 == 1)
             {
-                Vopros_1_History_of_the_IT_sphere.Background = Brushes.Red;
+                Vopros_1_History_of_the_IT_sphere.Style = style;
             }
 
             double y_2 = double.Parse(test_2.Text);
             if (y_2 == 1)
             {
-                Vopros_1_Voprosi_IT.Background = Brushes.Red;
+                Vopros_1_Voprosi_IT.Style = style;
             }
 
             double y_3 = double.Parse(test_3.Text);
             if (y_3 == 1)
             {
-                Vopros_1_Voprosi_People_in_Programming.Background = Brushes.Red;
+                Vopros_1_Voprosi_People_in_Programming.Style = style;
             }
 
             double y_4 = double.Parse(test_4.Text);
             if (y_4 == 1)
             {
-                Vopros_2_History_of_the_IT_sphere.Background = Brushes.Red;
+                Vopros_2_History_of_the_IT_sphere.Style = style;
             }
 
             double y_5 = double.Parse(test_5.Text);
             if (y_5 == 1)
             {
-                Vopros_2_Voprosi_IT.Background = Brushes.Red;
+                Vopros_2_Voprosi_IT.Style = style;
             }
 
             double y_6 = double.Parse(test_6.Text);
             if (y_6 == 1)
             {
-                Vopros_2_Voprosi_People_in_Programming.Background = Brushes.Red;
+                Vopros_2_Voprosi_People_in_Programming.Style = style;
             }
 
             double y_7 = double.Parse(test_7.Text);
             if (y_7 == 1)
             {
-                Vopros_3_History_of_the_IT_sphere.Background = Brushes.Red;
+                Vopros_3_History_of_the_IT_sphere.Style = style;
             }
 
             double y_8 = double.Parse(test_8.Text);
             if (y_8 == 1)
             {
-                Vopros_3_Voprosi_IT.Background = Brushes.Red;
+                Vopros_3_Voprosi_IT.Style = style;
             }
 
             double y_9 = double.Parse(test_9.Text);
             if (y_9 == 1)
             {
-                Vopros_3_Voprosi_People_in_Programming.Background = Brushes.Red;
+                Vopros_3_Voprosi_People_in_Programming.Style = style;
             }
 
             double y_10 = double.Parse(test_10.Text);
             if (y_10 == 1)
             {
-                Vopros_4_History_of_the_IT_sphere.Background = Brushes.Red;
+                Vopros_4_History_of_the_IT_sphere.Style = style;
             }
 
             double y_11 = double.Parse(test_11.Text);
             if (y_11 == 1)
             {
-                Vopros_4_Voprosi_IT.Background = Brushes.Red;
+                Vopros_4_Voprosi_IT.Style = style;
             }
 
             double y_12 = double.Parse(test_12.Text);
             if (y_12 == 1)
             {
-                Vopros_4_Voprosi_People_in_Programming.Background = Brushes.Red;
+                Vopros_4_Voprosi_People_in_Programming.Style = style;
             }
 
             double y_13 = double.Parse(test_13.Text);
             if (y_13 == 1)
             {
-                Vopros_5_History_of_the_IT_sphere.Background = Brushes.Red;
+                Vopros_5_History_of_the_IT_sphere.Style = style;
             }
 
             double y_14 = double.Parse(test_14.Text);
             if (y_14 == 1)
             {
-               Vopros_5_Voprosi_IT.Background = Brushes.Red;
+               Vopros_5_Voprosi_IT.Style = style;
             }
 
             double y_15 = double.Parse(test_15.Text);
             if (y_15 == 1)
             {
-                Vopros_5_Voprosi_People_in_Programming.Background = Brushes.Red;
+                Vopros_5_Voprosi_People_in_Programming.Style = style;
             }
         }
         private void Nazad_Click(object sender, RoutedEventArgs e)
@@ -245,11 +248,11 @@ namespace ProfGames
         private void Vopros_1_Voprosi_IT_Click(object sender, RoutedEventArgs e)
         {
             Random rnd = new Random();
-            if (Vopros_1_Voprosi_IT.Background == Brushes.Red)
+            if (test2.Value == 1)
             {
                 MessageBox.Show("На этот вопрос уже ответили");
             }
-            else if (Vopros_1_Voprosi_IT.Background == Brushes.LightBlue)
+            else if (test2.Value == 0)
             {
                 for (int i = 0; i < 1; i++)
                 {
@@ -292,11 +295,11 @@ namespace ProfGames
 
         private void Vopros_2_Voprosi_IT_Click(object sender, RoutedEventArgs e)
         {
-            if (Vopros_2_Voprosi_IT.Background == Brushes.Red)
+            if (test5.Value == 1)
             {
                 MessageBox.Show("На этот вопрос уже ответили");
             }
-            else if (Vopros_2_Voprosi_IT.Background == Brushes.LightBlue)
+            else if (test5.Value == 0)
             {
                 Random rnd = new Random();
                 for (int i = 0; i < 1; i++)
@@ -341,11 +344,11 @@ namespace ProfGames
 
         private void Vopros_4_Voprosi_IT_Click(object sender, RoutedEventArgs e)
         {
-            if (Vopros_4_Voprosi_IT.Background == Brushes.Red)
+            if (test11.Value == 1)
             {
                 MessageBox.Show("На этот вопрос уже ответили");
             }
-            else if (Vopros_4_Voprosi_IT.Background == Brushes.LightBlue)
+            else if (test11.Value == 0)
             {
                 Random rnd = new Random();
                 for (int i = 0; i < 1; i++)
@@ -391,11 +394,11 @@ namespace ProfGames
 
         private void Vopros_5_Voprosi_IT_Click(object sender, RoutedEventArgs e)
         {
-            if (Vopros_5_Voprosi_IT.Background == Brushes.Red)
+            if (test14.Value == 1)
             {
                 MessageBox.Show("На этот вопрос уже ответили");
             }
-            else if (Vopros_5_Voprosi_IT.Background == Brushes.LightBlue)
+            else if (test14.Value == 0)
             {
                 Random rnd = new Random();
                 for (int i = 0; i < 1; i++)
@@ -440,11 +443,11 @@ namespace ProfGames
 
         private void Vopros_3_Voprosi_IT_Click(object sender, RoutedEventArgs e)
         {
-            if (Vopros_3_Voprosi_IT.Background == Brushes.Red)
+            if (test8.Value == 1)
             {
                 MessageBox.Show("На этот вопрос уже ответили");
             }
-            else if (Vopros_3_Voprosi_IT.Background == Brushes.LightBlue)
+            else if (test8.Value == 0)
             {
                 Random rnd = new Random();
                 for (int i = 0; i < 1; i++)
@@ -488,11 +491,11 @@ namespace ProfGames
 
         private void Vopros_1_Voprosi_People_in_Programming_Click(object sender, RoutedEventArgs e)
         {
-            if (Vopros_1_Voprosi_People_in_Programming.Background == Brushes.Red)
+            if (test3.Value == 1)
             {
                 MessageBox.Show("На этот вопрос уже ответили");
             }
-            else if (Vopros_1_Voprosi_People_in_Programming.Background == Brushes.LightBlue)
+            else if (test3.Value == 0)
             {
                 Random rnd = new Random();
                 for (int i = 0; i < 1; i++)
@@ -535,11 +538,11 @@ namespace ProfGames
 
         private void Vopros_2_Voprosi_People_in_Programming_Click(object sender, RoutedEventArgs e)
         {
-            if (Vopros_2_Voprosi_People_in_Programming.Background == Brushes.Red)
+            if (test6.Value == 1)
             {
                 MessageBox.Show("На этот вопрос уже ответили");
             }
-            else if (Vopros_2_Voprosi_People_in_Programming.Background == Brushes.LightBlue)
+            else if (test6.Value == 0)
             {
                 Random rnd = new Random();
                 for (int i = 0; i < 1; i++)
@@ -583,11 +586,11 @@ namespace ProfGames
 
         private void Vopros_3_Voprosi_People_in_Programming_Click(object sender, RoutedEventArgs e)
         {
-            if (Vopros_3_Voprosi_People_in_Programming.Background == Brushes.Red)
+            if (test9.Value == 1)
             {
                 MessageBox.Show("На этот вопрос уже ответили");
             }
-            else if (Vopros_3_Voprosi_People_in_Programming.Background == Brushes.LightBlue)
+            else if (test9.Value == 0)
             {
                 Random rnd = new Random();
                 for (int i = 0; i < 1; i++)
@@ -630,11 +633,11 @@ namespace ProfGames
 
         private void Vopros_4_Voprosi_People_in_Programming_Click(object sender, RoutedEventArgs e)
         {
-            if (Vopros_4_Voprosi_People_in_Programming.Background == Brushes.Red)
+            if (test12.Value == 1)
             {
                 MessageBox.Show("На этот вопрос уже ответили");
             }
-            else if (Vopros_4_Voprosi_People_in_Programming.Background == Brushes.LightBlue)
+            else if (test12.Value == 0)
             {
                 Random rnd = new Random();
                 for (int i = 0; i < 1; i++)
@@ -677,11 +680,11 @@ namespace ProfGames
 
         private void Vopros_5_Voprosi_People_in_Programming_Click(object sender, RoutedEventArgs e)
         {
-            if (Vopros_5_Voprosi_People_in_Programming.Background == Brushes.Red)
+            if (test15.Value == 1)
             {
                 MessageBox.Show("На этот вопрос уже ответили");
             }
-            else if (Vopros_5_Voprosi_People_in_Programming.Background == Brushes.LightBlue)
+            else if (test15.Value == 0)
             {
                 Random rnd = new Random();
                 for (int i = 0; i < 1; i++)
@@ -724,11 +727,11 @@ namespace ProfGames
 
         private void Vopros_1_History_of_the_IT_sphere_Click(object sender, RoutedEventArgs e)
         {
-            if (Vopros_1_History_of_the_IT_sphere.Background == Brushes.Red)
+            if (test1.Value == 1)
             {
                 MessageBox.Show("На этот вопрос уже ответили");
             }
-            else if (Vopros_1_History_of_the_IT_sphere.Background == Brushes.LightBlue)
+            else if (test1.Value == 0)
             {
                 Random rnd = new Random();
                 for (int i = 0; i < 1; i++)
@@ -771,11 +774,11 @@ namespace ProfGames
 
         private void Vopros_2_History_of_the_IT_sphere_Click(object sender, RoutedEventArgs e)
         {
-            if (Vopros_2_History_of_the_IT_sphere.Background == Brushes.Red)
+            if (test4.Value == 1)
             {
                 MessageBox.Show("На этот вопрос уже ответили");
             }
-            else if (Vopros_2_History_of_the_IT_sphere.Background == Brushes.LightBlue)
+            else if (test4.Value == 0)
             {
                 Random rnd = new Random();
                 for (int i = 0; i < 1; i++)
@@ -819,11 +822,11 @@ namespace ProfGames
 
         private void Vopros_3_History_of_the_IT_sphere_Click(object sender, RoutedEventArgs e)
         {
-            if (Vopros_3_History_of_the_IT_sphere.Background == Brushes.Red)
+            if (test7.Value == 1)
             {
                 MessageBox.Show("На этот вопрос уже ответили");
             }
-            else if (Vopros_3_History_of_the_IT_sphere.Background == Brushes.LightBlue)
+            else if (test7.Value == 0)
             {
                 Random rnd = new Random();
                 for (int i = 0; i < 1; i++)
@@ -867,11 +870,11 @@ namespace ProfGames
 
         private void Vopros_4_History_of_the_IT_sphere_Click(object sender, RoutedEventArgs e)
         {
-            if (Vopros_4_History_of_the_IT_sphere.Background == Brushes.Red)
+            if (test10.Value == 1)
             {
                 MessageBox.Show("На этот вопрос уже ответили");
             }
-            else if (Vopros_4_History_of_the_IT_sphere.Background == Brushes.LightBlue)
+            else if (test10.Value == 0)
             {
                 Random rnd = new Random();
                 for (int i = 0; i < 1; i++)
@@ -915,11 +918,11 @@ namespace ProfGames
 
         private void Vopros_5_History_of_the_IT_sphere_Click(object sender, RoutedEventArgs e)
         {
-            if (Vopros_5_History_of_the_IT_sphere.Background == Brushes.Red)
+            if (test13.Value == 1)
             {
                 MessageBox.Show("На этот вопрос уже ответили");
             }
-            else if (Vopros_5_History_of_the_IT_sphere.Background == Brushes.LightBlue)
+            else if (test13.Value == 0)
             {
                 Random rnd = new Random();
                 for (int i = 0; i < 1; i++)
@@ -960,45 +963,17 @@ namespace ProfGames
             }
 
         }
-         private Rekordi _current = new Rekordi();
-
         private void Pobeda_Click(object sender, RoutedEventArgs e)
         {
-            Komanda_1_t.Text = Komanda_1.Text;
-            Komanda_2_t.Text = Komanda_2.Text;
-            naz_1_t.Text = naz_1.Text;
-            naz_2_t.Text = naz_2.Text;
+            Rekordi rekordi = new Rekordi();
 
-            StringBuilder errors = new StringBuilder();
+            rekordi.ohko_k_2 = ohko_2.Value;
+            rekordi.ohko_k_1 = ohko_1.Value;
+            rekordi.komanda_1 = text_1.Value;
+            rekordi.komanda_2 = text_2.Value;
 
-            if (string.IsNullOrEmpty(_current.komanda_1))
-                errors.AppendLine("Укажите название команды");
-            if (_current.ohko_k_1 <= 0)
-                errors.AppendLine("Количество очков не может быть меньше или равно 0");
-            if (string.IsNullOrWhiteSpace(_current.komanda_2))
-                errors.AppendLine("Укажите название команды");
-            if (_current.ohko_k_2 <= 0)
-                errors.AppendLine("Количество очков не может быть меньше или равно 0");
-
-            if (errors.Length > 0)
-            {
-                MessageBox.Show(errors.ToString());
-                return;
-            }
-            if (_current.id == 0)
-                ProfGamesEntities.GetContext().Rekordi.Add(_current);
-
-            try
-            {
-                ProfGamesEntities.GetContext().SaveChanges();
-                MessageBox.Show("Информация сохранена");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
-
-        
+            AppConnect.model1db.Rekordi.Add(rekordi);
+            AppConnect.model1db.SaveChanges();
 
             double x = double.Parse(Komanda_1.Text);
             double y = double.Parse(Komanda_2.Text);

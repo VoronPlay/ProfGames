@@ -41,10 +41,10 @@ namespace ProfGames
                     switch (userObj.IdRole)
                     {
                         case 1:
-                            Manager.MainFrame.Navigate(new rekordi_admin());
+                            Manager.MainFrame.Navigate(new vibor_rekord_admin());
                             break;
                         case 2:
-                            Manager.MainFrame.Navigate(new rekordi());
+                            Manager.MainFrame.Navigate(new vibor_rekord());
                             break;
                     }
                 }

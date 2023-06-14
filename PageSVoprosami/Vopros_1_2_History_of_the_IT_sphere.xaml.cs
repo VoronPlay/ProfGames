@@ -26,20 +26,36 @@ namespace ProfGames.PageSVoprosami
             InitializeComponent();
             Vopros.ItemsSource = ProfGamesEntities.GetContext().Voprosi_History_of_the_IT_sphere.ToList();
         }
+
+        private void K_0_Click(object sender, RoutedEventArgs e)
+        {
+            test1.Value = test1.Value + 1;
+            Manager.MainFrame.Navigate(new Viktorina());
+        }
+
         private void Otvet_Click(object sender, RoutedEventArgs e)
         {
 
             if ((bool)Chek_1.IsChecked)
             {
                 Text_1.Background = Brushes.Red;
+                K_0.Background = Brushes.Red;
+                K_0.Foreground = Brushes.Black;
+                K_0.Content = "0";
             }
             if ((bool)Chek_2.IsChecked)
             {
                 Text_2.Background = Brushes.Red;
+                K_0.Background = Brushes.Red;
+                K_0.Foreground = Brushes.Black;
+                K_0.Content = "0";
             }
             if ((bool)Chek_3.IsChecked)
             {
                 Text_3.Background = Brushes.Red;
+                K_0.Background = Brushes.Red;
+                K_0.Foreground = Brushes.Black;
+                K_0.Content = "0";
             }
             if ((bool)Chek_4.IsChecked)
             {
@@ -48,19 +64,19 @@ namespace ProfGames.PageSVoprosami
 
             if ((bool)Chek_1.IsChecked)
             {
-                TOtvet.Foreground = Brushes.DarkBlue;
+                TOtvet.Foreground = Brushes.Yellow;
             }
             else if ((bool)Chek_2.IsChecked)
             {
-                TOtvet.Foreground = Brushes.DarkBlue;
+                TOtvet.Foreground = Brushes.Yellow;
             }
             else if ((bool)Chek_3.IsChecked)
             {
-                TOtvet.Foreground = Brushes.DarkBlue;
+                TOtvet.Foreground = Brushes.Yellow;
             }
             else if ((bool)Chek_4.IsChecked)
             {
-                TOtvet.Foreground = Brushes.DarkBlue;
+                TOtvet.Foreground = Brushes.Yellow;
             }
             else
             {

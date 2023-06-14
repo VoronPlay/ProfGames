@@ -27,7 +27,7 @@ namespace ProfGames.PageSVoprosami
 
         private void nazvati_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(komanda_1.Text) || string.IsNullOrEmpty(komanda_2.Text))
+            if (string.IsNullOrWhiteSpace(komanda_1.Text) || string.IsNullOrWhiteSpace(komanda_2.Text))
             {
                 MessageBox.Show("Введите название команды");
             }
@@ -37,6 +37,16 @@ namespace ProfGames.PageSVoprosami
                 text_2.Value = text_2.Value = komanda_2.Text;
                 Manager.MainFrame.Navigate(new Viktorina());
             }
+        }
+
+        private void dobaviti_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new PageSVoprosami_3_k.dialog_1_3k());
+        }
+
+        private void nazad_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new StartPage());
         }
     }
 }

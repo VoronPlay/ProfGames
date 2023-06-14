@@ -34,16 +34,27 @@ namespace ProfGames
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
+            
+
             StringBuilder errors = new StringBuilder();
 
-            if (string.IsNullOrWhiteSpace(_current.komanda_1))
+            if (string.IsNullOrEmpty(_current.komanda_1 + " "))
+                errors.AppendLine("Укажите название команды");
+            if (string.IsNullOrEmpty(_current.komanda_3 + " "))
                 errors.AppendLine("Укажите название команды");
             if (_current.ohko_k_1 <= 0)
                 errors.AppendLine("Количество очков не может быть меньше или равно 0");
-            if (string.IsNullOrWhiteSpace(_current.komanda_2))
+            if (string.IsNullOrEmpty(_current.komanda_2 + " "))
+                errors.AppendLine("Укажите название команды");
+            if (string.IsNullOrEmpty(_current.komanda_4 + " "))
                 errors.AppendLine("Укажите название команды");
             if (_current.ohko_k_2 <= 0)
                 errors.AppendLine("Количество очков не может быть меньше или равно 0");
+            if (_current.ohko_k_3 <= 0)
+                errors.AppendLine("Количество очков не может быть меньше или равно 0");
+            if (_current.ohko_k_4 <= 0)
+                errors.AppendLine("Количество очков не может быть меньше или равно 0");
+
 
             if (errors.Length > 0)
             {

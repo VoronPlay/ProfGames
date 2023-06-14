@@ -24,7 +24,7 @@ namespace ProfGames
         {
             InitializeComponent();
 
-            win.Content = "Победила команда " + text_2.Value + " со счетам " + ohko_2.Value;
+            win.Text = "Победила команда " + text_2.Value + " со счетам " + ohko_2.Value;
         }
 
         private void nazad_Click(object sender, RoutedEventArgs e)

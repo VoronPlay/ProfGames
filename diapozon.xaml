@@ -1,0 +1,80 @@
+﻿<Page x:Class="ProfGames.diapozon"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProfGames"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1100"
+      Title="diapozon" Background="White">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="30*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="125*"/>
+            <RowDefinition Height="190*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="104*"/>
+            <RowDefinition Height="18*"/>
+        </Grid.RowDefinitions>
+        <Image Source="Resource/fon_11.jpg" Grid.Column="0" Grid.Row="0" Grid.RowSpan="5" Grid.ColumnSpan="7" Height="1800" Width="2000" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="1" FontFamily="{StaticResource pix}" FontSize="52" Foreground="Red" Text="Выберите диапозон поле" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="5">
+            <TextBlock.Effect>
+                <DropShadowEffect
+      ShadowDepth="4"
+      Direction="330"
+      Color="Black"
+      Opacity="1"
+     BlurRadius="4"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <Border Grid.Column="1" Background="Green" Grid.ColumnSpan="1" Grid.Row="1" Cursor="Hand" HorizontalAlignment="Right" Margin="0,0,50,0">
+            <Border.OpacityMask>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <Border CornerRadius="1" Width="1" Height="1" Background="White"/>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.OpacityMask>
+        <Button Grid.ColumnSpan="1" Style="{StaticResource MyButtonStyle}" FontSize="30" x:Name="dva" Click="dva_Click" Grid.Row="1" Grid.Column="1" Margin="5,5,5,5">
+            <Image Source="Resource/2x2.png"/>
+        </Button>
+            </Border>
+        <Border Grid.Column="3" Background="Yellow" Grid.ColumnSpan="1" Grid.Row="1" Cursor="Hand" HorizontalAlignment="Right" Margin="0,0,50,0">
+            <Border.OpacityMask>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <Border CornerRadius="1" Width="1" Height="1" Background="White"/>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.OpacityMask>
+            <Button Grid.Column="3" Style="{StaticResource MyButtonStyle}"  FontSize="30" x:Name="hetire" Click="hetire_Click" Grid.ColumnSpan="1" Grid.Row="1" Margin="5,5,5,5">
+            <Image Source="Resource/4x4.png"/>
+        </Button>
+        </Border>
+        <Border Grid.Column="5" Background="Orange" Grid.ColumnSpan="1" Grid.Row="1" Cursor="Hand" HorizontalAlignment="Right" Margin="0,0,50,0">
+            <Border.OpacityMask>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <Border CornerRadius="1" Width="1" Height="1" Background="White"/>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.OpacityMask>
+        <Button Grid.Column="5" Style="{StaticResource MyButtonStyle}" FontSize="30" x:Name="voseni" Click="voseni_Click" Grid.Row="1" Margin="5,5,5,5">
+            <Image Source="Resource/8x8.png"/>
+        </Button>
+           </Border>
+        
+        <Button Grid.Column="3" Style="{StaticResource MyButtonStyle}" FontSize="30" x:Name="nazad" Click="nazad_Click"   Grid.Row="3" Margin="5,5,5,5">
+            <Image Source="Resource/nazad.png"/>
+        </Button>
+    </Grid>
+</Page>

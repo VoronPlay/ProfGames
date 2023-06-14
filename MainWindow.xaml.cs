@@ -19,11 +19,19 @@ namespace ProfGames
 
     static class ohko_1
     {
-        public static int? Value { get; set; }
+        public static int Value { get; set; }
     }
     static class ohko_2
     {
-        public static int? Value { get; set; }
+        public static int Value { get; set; }
+    }
+    static class ohko_3
+    {
+        public static int Value { get; set; }
+    }
+    static class ohko_4
+    {
+        public static int Value { get; set; }
     }
     static class text_1
     {
@@ -33,6 +41,25 @@ namespace ProfGames
     {
         public static string Value { get; set; }
     }
+    static class text_3
+    {
+        public static string Value { get; set; }
+    }
+    static class text_4
+    {
+        public static string Value { get; set; }
+    }
+
+    static class chet_1
+    {
+        public static int? Value { get; set; }
+    }
+
+    static class chet_2
+    {
+        public static int? Value { get; set; }
+    }
+
     static class test1
     {
         public static int? Value { get; set; }

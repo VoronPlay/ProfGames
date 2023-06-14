@@ -1,0 +1,37 @@
+﻿<Page x:Class="ProfGames.win_k_3"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProfGames"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1100"
+      Title="win_k_3" Background="White">
+    <Grid>
+        <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="20*"/>
+        <ColumnDefinition Width="20*"/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="30*"/>
+        <RowDefinition Height="20*"/>
+        <RowDefinition Height="30*"/>
+    </Grid.RowDefinitions>
+        <Image Source="Resource/win.png" Grid.Column="0" Grid.Row="0" Grid.RowSpan="5" Grid.ColumnSpan="7" Height="2000" Width="2000" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Margin="0,0,0,88" Grid.RowSpan="2">
+            <TextBlock x:Name="win" HorizontalAlignment="Center" Text="Победила дружба" FontFamily="{StaticResource pix}" FontSize="40" Foreground="Red">
+                <TextBlock.Effect>
+                    <DropShadowEffect
+      ShadowDepth="4"
+      Direction="330"
+      Color="Black"
+      Opacity="1"
+     BlurRadius="4"/>
+                </TextBlock.Effect>
+            </TextBlock>
+            <Button x:Name="nazad" Click="nazad_Click" HorizontalContentAlignment="Center" Style="{StaticResource MyButtonStyle}" Height="110" Width="110">
+                <Image Source="Resource/nazad.png" Height="100" Width="100"/>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>

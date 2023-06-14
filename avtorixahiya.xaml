@@ -5,22 +5,55 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ProfGames"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="700" d:DesignWidth="1100"
       Title="avtorixahiya" Background="White">
 
     <Grid>
+        <Image Source="Resource/DSpag12e1i0.jpg" Grid.Column="0" Grid.Row="0" Grid.RowSpan="5" Grid.ColumnSpan="7" Height="1800" Width="2000" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <Label Content="Авторизация" Style="{StaticResource Label}" HorizontalAlignment="Center"/>
-                <Label Content="Введите логин" Style="{StaticResource Label}"/>
-                <TextBox Text="" Style="{StaticResource TextBox}" x:Name="txbLogin"/>
-                <Label Content="Введите пароль" Style="{StaticResource Label}"/>
-                <PasswordBox Style="{StaticResource PasswordBox}" x:Name="psbPassword"/>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <Button x:Name="btnIn" Content="Войти" Style="{StaticResource ButtonD}" Click="btnIn_Click"/>
-                    <Button x:Name="nazad" Content="Назад" Style="{StaticResource ButtonD}" Click="nazad_Click"/>
+                <TextBlock Text="Авторизация" FontFamily="{StaticResource pix}" FontSize="48"  HorizontalAlignment="Center" Margin="20,20,20,20" Foreground="Red">
+                    <TextBlock.Effect>
+                        <DropShadowEffect
+      ShadowDepth="4"
+      Direction="330"
+      Color="Black"
+      Opacity="1"
+     BlurRadius="4"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+                <TextBlock Text="Введите логин" FontFamily="{StaticResource pix}" FontSize="48"  HorizontalAlignment="Center" Margin="20,20,20,20" Foreground="Red">
+                    <TextBlock.Effect>
+                        <DropShadowEffect
+      ShadowDepth="4"
+      Direction="330"
+      Color="Black"
+      Opacity="1"
+     BlurRadius="4"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+                <TextBox Text=""  Width="365" Height="80" FontFamily="{StaticResource pix}" FontSize="30" Style="{StaticResource roundcornerTextboxwithbordereffect}" x:Name="txbLogin"/>
+                <TextBlock Text="Введите пароль" FontFamily="{StaticResource pix}"  HorizontalAlignment="Center" FontSize="48" Margin="20,20,20,20" Foreground="Red">
+                    <TextBlock.Effect>
+                        <DropShadowEffect
+      ShadowDepth="4"
+      Direction="330"
+      Color="Black"
+      Opacity="1"
+     BlurRadius="4"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+                <PasswordBox Style="{StaticResource PasswordBox}" FontFamily="{StaticResource pix}" x:Name="psbPassword" Width="365" Height="80" FontSize="30"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                    <Button x:Name="btnIn" Click="btnIn_Click" Height="100" Margin="20,20,20,20" Width="100" Style="{StaticResource MyButtonStyle}">
+                        <Image Source="Resource/voiti.png"></Image>
+                    </Button>
+                    <Button x:Name="nazad" Height="100" Margin="20,20,20,20" Width="100" Style="{StaticResource MyButtonStyle}" Click="nazad_Click">
+                        <Image Source="Resource/nazad.png"></Image>
+                    </Button>
                 </StackPanel>
             </StackPanel>
         </StackPanel>
+        
     </Grid>
 </Page>

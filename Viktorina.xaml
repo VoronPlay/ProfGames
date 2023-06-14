@@ -5,8 +5,8 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ProfGames"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Viktorina" Background="White">
+      d:DesignHeight="700" d:DesignWidth="1100"
+      Title="Viktorina">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10*"/>
@@ -47,42 +47,38 @@
             <RowDefinition Height="70*"/>
             <RowDefinition Height="6*"/>
         </Grid.RowDefinitions>
-        <Image Source="Resource/fon.jpg"  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="30" Width="2000" Height="2000" Grid.RowSpan="30"/>
-        <Button Style="{StaticResource  Button_1}" FontWeight="Bold"  x:Name="Pobeda" Click="Pobeda_Click" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="5" FontSize="20" Content="Вывести победителя"/>
-        <Button Style="{StaticResource  Button_1}" FontWeight="Bold"  x:Name="Nazad" Click="Nazad_Click" Grid.Column="15" Grid.Row="9" Grid.ColumnSpan="8" FontSize="20" Content="Вернуться назад"/>
-        <TextBlock FontWeight="Bold" Foreground="Yellow" x:Name="naz_1" Text="" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1"/>
-        <TextBox FontWeight="Bold" Foreground="Yellow" x:Name="naz_1_t" Text="{Binding komanda_1}" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1"/>
-        <TextBlock FontWeight="Bold" Foreground="Yellow" Text="0" x:Name="Komanda_1" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="1"/>
-        <TextBox FontWeight="Bold" Foreground="Yellow" Text="{Binding ohko_k_1}" x:Name="Komanda_1_t" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="1"/>
-        <TextBlock FontWeight="Bold" Foreground="Yellow" Text="Очков" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="7" Grid.Row="1" Grid.ColumnSpan="3"/>
-        <TextBlock FontWeight="Bold" Foreground="Yellow" Text="" x:Name="naz_2" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="11" Grid.Row="1" Grid.ColumnSpan="5"/>
-        <TextBox FontWeight="Bold" Foreground="Yellow" Text="{Binding komanda_2}" x:Name="naz_2_t" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="11" Grid.Row="1" Grid.ColumnSpan="5"/>
-        <TextBlock FontWeight="Bold" Foreground="Yellow" x:Name="Komanda_2" Text="0" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="19" Grid.Row="1" Grid.RowSpan="1" Grid.ColumnSpan="2"/>
-        <TextBox FontWeight="Bold" Foreground="Yellow" x:Name="Komanda_2_t" Text="{Binding ohko_k_2}" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="19" Grid.Row="1" Grid.RowSpan="1" Grid.ColumnSpan="2"/>
-        <TextBlock FontWeight="Bold" Foreground="Yellow" Text="Очков" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="22" Grid.Row="1" Grid.ColumnSpan="1"/>
-        <TextBlock FontWeight="Bold" Foreground="Yellow" Text="IT-Вопросы" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="3" />
-        <TextBlock FontWeight="Bold" Foreground="Yellow" Grid.Column="1" FontSize="23" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Row="5" Grid.ColumnSpan="3" TextWrapping="Wrap" Text="Люди в Программирование" MaxWidth="300" />
-        <TextBlock FontWeight="Bold" Foreground="Yellow" Text="История IT-Сферы" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3"/>
-        <TextBlock x:Name="R_1" FontWeight="Bold" Foreground="Transparent" Text="0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="3"/>
-        <TextBlock x:Name="test_1" FontWeight="Bold" Foreground="Transparent" Text="0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="3"/>
-        <TextBlock x:Name="test_2" FontWeight="Bold" Foreground="Transparent" Text="0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="3"/>
-        <TextBlock x:Name="test_3" FontWeight="Bold" Foreground="Transparent" Text="0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="3"/>
-        <TextBlock x:Name="test_4" FontWeight="Bold" Foreground="Transparent" Text="0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="3"/>
-        <TextBlock x:Name="test_5" FontWeight="Bold" Foreground="Transparent" Text="0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="3"/>
-        <TextBlock x:Name="test_6" FontWeight="Bold" Foreground="Transparent" Text="0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="3"/>
-        <TextBlock x:Name="test_7" FontWeight="Bold" Foreground="Transparent" Text="0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="3"/>
-        <TextBlock x:Name="test_8" FontWeight="Bold" Foreground="Transparent" Text="0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="3"/>
-        <TextBlock x:Name="test_9" FontWeight="Bold" Foreground="Transparent" Text="0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="3"/>
-        <TextBlock x:Name="test_10" FontWeight="Bold" Foreground="Transparent" Text="0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="3"/>
-        <TextBlock x:Name="test_11" FontWeight="Bold" Foreground="Transparent" Text="0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="3"/>
-        <TextBlock x:Name="test_12" FontWeight="Bold" Foreground="Transparent" Text="0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="3"/>
-        <TextBlock x:Name="test_13" FontWeight="Bold" Foreground="Transparent" Text="0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="3"/>
-        <TextBlock x:Name="test_14" FontWeight="Bold" Foreground="Transparent" Text="0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="3"/>
-        <TextBlock x:Name="test_15" FontWeight="Bold" Foreground="Transparent" Text="0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="3"/>
-        
-        
-        <Button Style="{StaticResource  Button_1}" x:Name="Vopros_2_Voprosi_IT" Click="Vopros_2_Voprosi_IT_Click" Content="20" FontSize="50" Grid.Column="9" Grid.Row="3" Grid.ColumnSpan="3"/>
-        <Button Style="{StaticResource  Button_1}" x:Name="Vopros_2_History_of_the_IT_sphere" Click="Vopros_2_History_of_the_IT_sphere_Click" Content="20" FontSize="50" Grid.Column="9" Grid.Row="7" Grid.ColumnSpan="3"/>
+        <Image Source="Resource/fon_v.png"  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="30" Width="2000" Height="2000" Grid.RowSpan="30"/>
+        <Button Style="{StaticResource  Button_1}"   x:Name="Pobeda" Click="Pobeda_Click" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="5" FontSize="23" Content="Вывести победителя"/>
+        <Button Style="{StaticResource  Button_1}"   x:Name="Nazad" Click="Nazad_Click" Grid.Column="15" Grid.Row="9" Grid.ColumnSpan="8" FontSize="23" Content="Вернуться назад"/>
+        <TextBlock FontWeight="Bold" Style="{StaticResource  TB}" Padding="15" TextAlignment="Center" Opacity="0.8" VerticalAlignment="Center"  FontFamily="{StaticResource pix}" FontSize="25" x:Name="naz_1" Text=""    HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1"/>
+       <TextBlock FontWeight="Bold" Style="{StaticResource  TB}" Padding="15" TextAlignment="Center" Opacity="0.8" VerticalAlignment="Center"  FontFamily="{StaticResource pix}" FontSize="25" Text="0" x:Name="Komanda_1"    HorizontalAlignment="Center" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="1"/>
+       <TextBlock FontWeight="Bold" Style="{StaticResource  TB}" Padding="15" TextAlignment="Center" Opacity="0.8" VerticalAlignment="Center"  FontFamily="{StaticResource pix}" FontSize="25" Text="Очков"    HorizontalAlignment="Center" Grid.Column="7" Grid.Row="1" Grid.ColumnSpan="3"/>
+       <TextBlock FontWeight="Bold" Style="{StaticResource  TB}" Padding="15" TextAlignment="Center" Opacity="0.8" VerticalAlignment="Center"  FontFamily="{StaticResource pix}" FontSize="25" Text="" x:Name="naz_2"    HorizontalAlignment="Center" Grid.Column="11" Grid.Row="1" Grid.ColumnSpan="5"/>
+       <TextBlock FontWeight="Bold" Style="{StaticResource  TB}" Padding="15" TextAlignment="Center" Opacity="0.8" VerticalAlignment="Center"  FontFamily="{StaticResource pix}" FontSize="25" x:Name="Komanda_2" Text="0"    HorizontalAlignment="Center" Grid.Column="18" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="1"/>
+       <TextBlock FontWeight="Bold" Style="{StaticResource  TB}" Padding="15" TextAlignment="Center" Opacity="0.8" VerticalAlignment="Center"  FontFamily="{StaticResource pix}" FontSize="25" Text="Очков"   HorizontalAlignment="Center" Grid.Column="22" Grid.Row="1" Grid.ColumnSpan="1"/>
+        <TextBlock FontWeight="Bold" Style="{StaticResource  TB}" Padding="15" HorizontalAlignment="Left" TextAlignment="Left" Opacity="0.8" VerticalAlignment="Center" FontFamily="{StaticResource pix}" FontSize="25" Text="IT-Вопросы" Grid.Column="1" Grid.Row="3" />
+        <TextBlock FontWeight="Bold" Style="{StaticResource  TB}" Padding="15" HorizontalAlignment="Left" TextAlignment="Left" Opacity="0.9" VerticalAlignment="Center" FontFamily="{StaticResource pix}" FontSize="22" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="3" TextWrapping="WrapWithOverflow" Text="Люди в Программирование" />
+        <TextBlock FontWeight="Bold" Style="{StaticResource  TB}"  Padding="15" HorizontalAlignment="Left" TextAlignment="Left" Opacity="0.9" VerticalAlignment="Center"  FontFamily="{StaticResource pix}" FontSize="25" Text="История IT-Сферы" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3"/>
+        <TextBlock x:Name="R_1" Foreground="Transparent" Text="0" />
+        <TextBlock x:Name="test_1" Foreground="Transparent" Text="0" />
+        <TextBlock x:Name="test_2"  Foreground="Transparent" Text="0" />
+        <TextBlock x:Name="test_3"  Foreground="Transparent" Text="0" />
+        <TextBlock x:Name="test_4"  Foreground="Transparent" Text="0" />
+        <TextBlock x:Name="test_5"  Foreground="Transparent" Text="0" />
+        <TextBlock x:Name="test_6"  Foreground="Transparent" Text="0" />
+        <TextBlock x:Name="test_7"  Foreground="Transparent" Text="0" />
+        <TextBlock x:Name="test_8"  Foreground="Transparent" Text="0" />
+        <TextBlock x:Name="test_9"  Foreground="Transparent" Text="0" />
+        <TextBlock x:Name="test_10"  Foreground="Transparent" Text="0" />
+        <TextBlock x:Name="test_11"  Foreground="Transparent" Text="0" />
+        <TextBlock x:Name="test_12"  Foreground="Transparent" Text="0" />
+        <TextBlock x:Name="test_13"  Foreground="Transparent" Text="0" />
+        <TextBlock x:Name="test_14"  Foreground="Transparent" Text="0" />
+        <TextBlock x:Name="test_15"  Foreground="Transparent" Text="0" />
+
+
+        <Button Style="{StaticResource Button_1}" x:Name="Vopros_2_Voprosi_IT" Click="Vopros_2_Voprosi_IT_Click" Content="20" FontSize="50" Grid.Column="9" Grid.Row="3" Grid.ColumnSpan="3"/>
+        <Button Style="{StaticResource Button_1}" x:Name="Vopros_2_History_of_the_IT_sphere" Click="Vopros_2_History_of_the_IT_sphere_Click" Content="20" FontSize="50" Grid.Column="9" Grid.Row="7" Grid.ColumnSpan="3"/>
         <Button Style="{StaticResource  Button_1}" x:Name="Vopros_2_Voprosi_People_in_Programming" Click="Vopros_2_Voprosi_People_in_Programming_Click" Content="20" FontSize="50" Grid.Column="9" Grid.Row="5" Grid.ColumnSpan="3"/>
         <Button Style="{StaticResource  Button_1}" x:Name="Vopros_1_Voprosi_IT" Click="Vopros_1_Voprosi_IT_Click" Content="10" FontSize="50" Grid.Column="5" Grid.Row="3" Grid.ColumnSpan="3"/>
         <Button Style="{StaticResource  Button_1}" x:Name="Vopros_1_History_of_the_IT_sphere" Click="Vopros_1_History_of_the_IT_sphere_Click" Content="10" FontSize="50" Grid.Column="5" Grid.Row="7" Grid.ColumnSpan="3" />

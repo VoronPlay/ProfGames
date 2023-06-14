@@ -1,0 +1,198 @@
+﻿<Page x:Class="ProfGames.memo_8na8"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProfGames"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1100"
+      Title="memo_8na8" Background="White">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="60*"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="70*"/>
+        </Grid.RowDefinitions>
+        <Image Source="Resource/fon_22.png" Grid.Column="0" Grid.Row="0" Grid.RowSpan="20" Grid.ColumnSpan="20" Height="2000" Width="2000" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="if_11" BorderBrush="Transparent" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+        <Button Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="1" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.RowSpan="1"  x:Name="if_1" Click="if_1_Click" ></Button>
+        <Button x:Name="if_22" Grid.Column="5" BorderBrush="Transparent" Grid.Row="3"/>
+        <Button Grid.Column="5"  x:Name="if_2" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Click="if_2_Click" Grid.Row="3"></Button>
+        <Button x:Name="else_11" Grid.Column="5" BorderBrush="Transparent" Grid.Row="1"/>
+        <Button Grid.Column="5" Content=""  x:Name="else_1" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Click="else_1_Click" Grid.Row="1" />
+        <Button x:Name="else_22" Grid.Column="1" BorderBrush="Transparent" Grid.Row="3" />
+        <Button Grid.Column="1" Content=""  x:Name="else_2" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Click="else_2_Click" Grid.Row="3" />
+        <Button x:Name="xaml_11" Grid.Column="7" Grid.Row="3" BorderBrush="Transparent"/>
+        <Button Grid.Column="7" Content=""  x:Name="xaml_1" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Click="xaml_1_Click" Grid.Row="3" />
+        <Button x:Name="xaml_22" Grid.Column="3" Grid.Row="1" BorderBrush="Transparent"/>
+        <Button Grid.Column="3" Content=""  x:Name="xaml_2" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Click="xaml_2_Click" Grid.Row="1" />
+        <Button x:Name="Grid_22" Grid.Column="3" Grid.Row="3" BorderBrush="Transparent"/>
+        <Button Grid.Column="3" Content=""  x:Name="Grid_2" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Click="Grid_2_Click" Grid.Row="3" />
+        <Button Grid.Column="3" Grid.Row="5" x:Name="Grid_11" BorderBrush="Transparent"/>
+        <Button Grid.Column="3" Content=""  x:Name="Grid_1" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Click="Grid_1_Click" Grid.Row="5" />
+        <Button x:Name="void_11" Grid.Column="3" Grid.Row="7" BorderBrush="Transparent"></Button>
+        <Button Grid.Column="3"   x:Name="void_1" Click="void_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="7"></Button>
+        <Button x:Name="void_22" Grid.Column="7" Grid.Row="1" BorderBrush="Transparent"></Button>
+        <Button Grid.Column="7"   x:Name="void_2" Click="void_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="1"></Button>
+        <Button x:Name="mode_11" Grid.Column="5" Grid.Row="7" BorderBrush="Transparent"/>
+        <Button Grid.Column="5" Content=""  x:Name="mode_1" Click="mode_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="7" />
+        <Button x:Name="mode_22" Grid.Column="1" Grid.Row="7" BorderBrush="Transparent"/>
+        <Button Grid.Column="1" Content=""  x:Name="mode_2" Click="mode_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="7" />
+        <Button x:Name="int_11" Grid.Column="1" Grid.Row="5" BorderBrush="Transparent"/>
+        <Button Grid.Column="1" Content=""  x:Name="int_1" Click="int_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="5" />
+        <Button x:Name="int_22" Grid.Column="7"  Grid.Row="7" BorderBrush="Transparent"/>
+        <Button Grid.Column="7" Content=""  x:Name="int_2" Click="int_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="7" />
+        <Button x:Name="value_11" Grid.Column="7" Grid.Row="5" BorderBrush="Transparent"/>
+        <Button Grid.Column="7" Content=""  x:Name="value_1" Click="value_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="5" />
+        <Button x:Name="value_22"  Grid.Column="5"  Grid.Row="5" BorderBrush="Transparent"/>
+        <Button Grid.Column="5" Content=""  x:Name="value_2" Click="value_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="5" />
+        <Button x:Name="cha_11"  Grid.Column="9"  Grid.Row="5" BorderBrush="Transparent"/>
+        <Button Grid.Column="9" Content=""  x:Name="cha_1" Click="cha_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="5" />
+        <Button x:Name="cha_22"  Grid.Column="15"  Grid.Row="5" BorderBrush="Transparent"/>
+        <Button Grid.Column="15" Content=""  x:Name="cha_2" Click="cha_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="5" />
+        <Button x:Name="ci_11"  Grid.Column="15"  Grid.Row="7" BorderBrush="Transparent"/>
+        <Button Grid.Column="15" Content=""  x:Name="ci_1" Click="ci_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="7" />
+        <Button x:Name="ci_22"  Grid.Column="15"  Grid.Row="13" BorderBrush="Transparent"/>
+        <Button Grid.Column="15" Content=""  x:Name="ci_2" Click="ci_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="13" />
+        <Button x:Name="java_11"  Grid.Column="15"  Grid.Row="15" BorderBrush="Transparent"/>
+        <Button Grid.Column="15" Content=""  x:Name="java_1" Click="java_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="15" />
+        <Button x:Name="java_22"  Grid.Column="1"  Grid.Row="15" BorderBrush="Transparent"/>
+        <Button Grid.Column="1" Content=""  x:Name="java_2" Click="java_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="15" />
+        <Button x:Name="php_11"  Grid.Column="3"  Grid.Row="15" BorderBrush="Transparent"/>
+        <Button Grid.Column="3" Content=""  x:Name="php_1" Click="php_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="15" />
+        <Button x:Name="php_22"  Grid.Column="3"  Grid.Row="11" BorderBrush="Transparent"/>
+        <Button Grid.Column="3" Content=""  x:Name="php_2" Click="php_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="11" />
+        <Button x:Name="js_11"  Grid.Column="1"  Grid.Row="11" BorderBrush="Transparent"/>
+        <Button Grid.Column="1" Content=""  x:Name="js_1" Click="js_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="11" />
+        <Button x:Name="js_22"  Grid.Column="9"  Grid.Row="11" BorderBrush="Transparent"/>
+        <Button Grid.Column="9" Content=""  x:Name="js_2" Click="js_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="11" />
+        <Button x:Name="sql_11"  Grid.Column="7"  Grid.Row="11" BorderBrush="Transparent"/>
+        <Button Grid.Column="7" Content=""  x:Name="sql_1" Click="sql_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="11" />
+        <Button x:Name="sql_22"  Grid.Column="5"  Grid.Row="11" BorderBrush="Transparent"/>
+        <Button Grid.Column="5" Content=""  x:Name="sql_2" Click="sql_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="11" />
+        <Button x:Name="c1_11"  Grid.Column="11"  Grid.Row="11" BorderBrush="Transparent"/>
+        <Button Grid.Column="11" Content=""  x:Name="c1_1" Click="c1_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="11" />
+        <Button x:Name="c1_22"  Grid.Column="13"  Grid.Row="11" BorderBrush="Transparent"/>
+        <Button Grid.Column="13" Content=""  x:Name="c1_2" Click="c1_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="11" />
+        <Button x:Name="null_11"  Grid.Column="15"  Grid.Row="11" BorderBrush="Transparent"/>
+        <Button Grid.Column="15" Content=""  x:Name="null_1" Click="null_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="11" />
+        <Button x:Name="null_22"  Grid.Column="15"  Grid.Row="9" BorderBrush="Transparent" />
+        <Button Grid.Column="15" Content=""  x:Name="null_2" Click="null_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="9" />
+        <Button x:Name="var_11"  Grid.Column="15"  Grid.Row="1" BorderBrush="Transparent"/>
+        <Button Grid.Column="15" Content=""  x:Name="var_1" Click="var_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="1" />
+        <Button x:Name="var_22"  Grid.Column="15"  Grid.Row="3" BorderBrush="Transparent"/>
+        <Button Grid.Column="15" Content=""  x:Name="var_2" Click="var_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="3" />
+        <Button x:Name="net_11"  Grid.Column="13"  Grid.Row="3" BorderBrush="Transparent"/>
+        <Button Grid.Column="13" Content=""  x:Name="net_1" Click="net_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="3" />
+        <Button x:Name="net_22"  Grid.Column="11"  Grid.Row="3" BorderBrush="Transparent"/>
+        <Button Grid.Column="11" Content=""  x:Name="net_2" Click="net_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="3" />
+        <Button x:Name="fh_11"  Grid.Column="9"  Grid.Row="3" BorderBrush="Transparent"/>
+        <Button Grid.Column="9" Content=""  x:Name="fh_1" Click="fh_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="3" />
+        <Button x:Name="fh_22"  Grid.Column="9"  Grid.Row="1" BorderBrush="Transparent"/>
+        <Button Grid.Column="9" Content=""  x:Name="fh_2" Click="fh_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="1" />
+        <Button x:Name="true_11"  Grid.Column="11"  Grid.Row="1" BorderBrush="Transparent"/>
+        <Button Grid.Column="11" Content=""  x:Name="true_1" Click="true_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="1" />
+        <Button x:Name="true_22"  Grid.Column="13"  Grid.Row="1" BorderBrush="Transparent"/>
+        <Button Grid.Column="13" Content=""  x:Name="true_2" Click="true_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="1" />
+        <Button x:Name="false_11"  Grid.Column="13"  Grid.Row="5" BorderBrush="Transparent"/>
+        <Button Grid.Column="13" Content=""  x:Name="false_1" Click="false_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="5" />
+        <Button x:Name="false_22"  Grid.Column="11"  Grid.Row="5" BorderBrush="Transparent"/>
+        <Button Grid.Column="11" Content=""  x:Name="false_2" Click="false_2_Click_1" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="5" />
+        <Button x:Name="bool_11"  Grid.Column="11"  Grid.Row="7" BorderBrush="Transparent"/>
+        <Button Grid.Column="11" Content=""  x:Name="bool_1" Click="bool_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="7" />
+        <Button x:Name="bool_22"  Grid.Column="9"  Grid.Row="7" BorderBrush="Transparent"/>
+        <Button Grid.Column="9" Content=""  x:Name="bool_2" Click="bool_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="7" />
+        <Button x:Name="byte_11"  Grid.Column="9"  Grid.Row="9" BorderBrush="Transparent"/>
+        <Button Grid.Column="9" Content=""  x:Name="byte_1" Click="byte_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="9" />
+        <Button x:Name="byte_22"  Grid.Column="11"  Grid.Row="9" BorderBrush="Transparent"/>
+        <Button Grid.Column="11" Content=""  x:Name="byte_2" Click="byte_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="9" />
+        <Button x:Name="sbyte_11"  Grid.Column="13"  Grid.Row="9" BorderBrush="Transparent"/>
+        <Button Grid.Column="13" Content=""  x:Name="sbyte_1" Click="sbyte_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="9" />
+        <Button x:Name="sbyte_22"  Grid.Column="13"  Grid.Row="7" BorderBrush="Transparent"/>
+        <Button Grid.Column="13" Content=""  x:Name="sbyte_2" Click="sbyte_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="7" />
+        <Button x:Name="uint_11"  Grid.Column="1"  Grid.Row="9" BorderBrush="Transparent" />
+        <Button Grid.Column="1" Content=""  x:Name="uint_1" Click="uint_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="9" />
+        <Button x:Name="uint_22"  Grid.Column="3"  Grid.Row="9" BorderBrush="Transparent"/>
+        <Button Grid.Column="3" Content=""  x:Name="uint_2" Click="uint_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="9" />
+        <Button x:Name="long_11"  Grid.Column="5"  Grid.Row="9" BorderBrush="Transparent" />
+        <Button Grid.Column="5" Content=""  x:Name="long_1" Click="long_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="9" />
+        <Button x:Name="long_22"  Grid.Column="7"  Grid.Row="9" BorderBrush="Transparent"/>
+        <Button Grid.Column="7" Content=""  x:Name="long_2" Click="long_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="9" />
+        <Button x:Name="ulong_11"  Grid.Column="1"  Grid.Row="13" BorderBrush="Transparent"/>
+        <Button Grid.Column="1" Content=""  x:Name="ulong_1" Click="ulong_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="13" />
+        <Button x:Name="ulong_22"  Grid.Column="3"  Grid.Row="13" BorderBrush="Transparent"/>
+        <Button Grid.Column="3" Content=""  x:Name="ulong_2" Click="ulong_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="13" />
+        <Button x:Name="char_11"  Grid.Column="13"  Grid.Row="13" BorderBrush="Transparent"/>
+        <Button Grid.Column="13" Content=""  x:Name="char_1" Click="char_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="13" />
+        <Button x:Name="char_22"  Grid.Column="13"  Grid.Row="15" BorderBrush="Transparent"/>
+        <Button Grid.Column="13" Content=""  x:Name="char_2" Click="char_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="15" />
+        <Button x:Name="for_11"  Grid.Column="11"  Grid.Row="15" BorderBrush="Transparent"/>
+        <Button Grid.Column="11" Content=""  x:Name="for_1" Click="for_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="15" />
+        <Button x:Name="for_22"  Grid.Column="11"  Grid.Row="13" BorderBrush="Transparent"/>
+        <Button Grid.Column="11" Content=""  x:Name="for_2" Click="for_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="13" />
+        <Button x:Name="do_11"  Grid.Column="9"  Grid.Row="13" BorderBrush="Transparent"/>
+        <Button Grid.Column="9" Content=""  x:Name="do_1" Click="do_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="13" />
+        <Button x:Name="do_22"  Grid.Column="9"  Grid.Row="15" BorderBrush="Transparent"/>
+        <Button Grid.Column="9" Content=""  x:Name="do_2" Click="do_2_Click"  Grid.Row="15" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}"/>
+        <Button x:Name="while_11"  Grid.Column="7"  Grid.Row="15" BorderBrush="Transparent"/>
+        <Button Grid.Column="7" Content=""  x:Name="while_1" Click="while_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="15" />
+        <Button x:Name="while_22"  Grid.Column="7"  Grid.Row="13" BorderBrush="Transparent"/>
+        <Button Grid.Column="7" Content=""  x:Name="while_2" Click="while_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}"  Grid.Row="13" />
+        <Button x:Name="date_11"  Grid.Column="5"  Grid.Row="15" BorderBrush="Transparent"/>
+        <Button Grid.Column="5" Content=""  x:Name="date_1" Click="date_1_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="15" />
+        <Button x:Name="date_22"  Grid.Column="5"  Grid.Row="13" BorderBrush="Transparent"/>
+        <Button Grid.Column="5" Content=""  x:Name="date_2" Click="date_2_Click" Style="{StaticResource Button_5}" FontFamily="{StaticResource pix}" Grid.Row="13" />
+        <TextBlock Grid.Column="1" Text="0" Foreground="Transparent" FontSize="30" x:Name="if_1_t"/>
+        <TextBlock Grid.Column="1" Text="0" Foreground="Transparent" FontSize="30" x:Name="if_2_t"/>
+        <TextBlock Foreground="RoyalBlue" HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="30"
+                  x:Name="tbTime"
+                   Grid.Column="7" Grid.Row="16" Grid.ColumnSpan="3" Grid.RowSpan="2" FontFamily="{StaticResource pix}">
+            <TextBlock.Effect>
+                <DropShadowEffect
+      ShadowDepth="4"
+      Direction="330"
+      Color="Black"
+      Opacity="1"
+     BlurRadius="4"/>
+            </TextBlock.Effect>
+        </TextBlock>
+    </Grid>
+</Page>

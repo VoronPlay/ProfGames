@@ -41,31 +41,40 @@ namespace ProfGames.PageSVoprosami
             if ((bool)Chek_2.IsChecked)
             {
                 Text_2.Background = Brushes.Red;
+                K_0.Background = Brushes.Red;
+                K_0.Foreground = Brushes.Black;
+                K_0.Content = "0";
             }
             if ((bool)Chek_3.IsChecked)
             {
                 Text_3.Background = Brushes.Red;
+                K_0.Background = Brushes.Red;
+                K_0.Foreground = Brushes.Black;
+                K_0.Content = "0";
             }
             if ((bool)Chek_4.IsChecked)
             {
                 Text_4.Background = Brushes.Red;
+                K_0.Background = Brushes.Red;
+                K_0.Foreground = Brushes.Black;
+                K_0.Content = "0";
             }
 
             if ((bool)Chek_1.IsChecked)
             {
-                Totvet.Background = Brushes.Black;
+                Totvet.Foreground = Brushes.Yellow;
             }
             else if ((bool)Chek_2.IsChecked)
             {
-                Totvet.Background = Brushes.Black;
+                Totvet.Foreground = Brushes.Yellow;
             }
             else if ((bool)Chek_3.IsChecked)
             {
-                Totvet.Background = Brushes.Black;
+                Totvet.Foreground = Brushes.Yellow;
             }
             else if ((bool)Chek_4.IsChecked)
             {
-                Totvet.Background = Brushes.Black;
+                Totvet.Foreground = Brushes.Yellow;
             }
             else
             {
@@ -136,5 +145,11 @@ namespace ProfGames.PageSVoprosami
                 MessageBox.Show("Выберите ответ");
             }
         }
+        private void K_0_Click(object sender, RoutedEventArgs e)
+        {
+            test13.Value = test13.Value + 1;
+            Manager.MainFrame.Navigate(new Viktorina());
+        }
+
     }
 }

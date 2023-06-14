@@ -4,9 +4,122 @@
              xmlns:local="clr-namespace:ProfGames"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <Style TargetType="{x:Type TextBox}" x:Key="roundcornerTextboxwithbordereffect">
+            <Setter Property="Padding" Value="10"></Setter>
+            <Setter Property="FontSize" Value="26"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border Background="{TemplateBinding Background}"    
+      x:Name="Bd" BorderBrush="Black"   
+      BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>
+                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="Width" Value="Auto">
+                                <Setter Property="MinWidth" Value="100"/>
+                            </Trigger>
+                            <Trigger Property="Height" Value="Auto">
+                                <Setter Property="MinHeight" Value="20"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="Red"></Setter>
+                                <Setter TargetName="Bd" Property="BorderThickness" Value="3"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="DarkOrange"></Setter>
+                                <Setter TargetName="Bd" Property="BorderThickness" Value="2"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ColumnHeaderGripperStyle"
+       TargetType="{x:Type Thumb}">
+            <Setter Property="Width"
+          Value="8" />
+            <Setter Property="Background"
+          Value="Transparent" />
+            <Setter Property="Cursor"
+          Value="SizeWE" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Thumb}">
+                        <Border Background="{TemplateBinding Background}"
+                Padding="{TemplateBinding Padding}" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <FontFamily x:Key="pix">Resource/font/#Pixeleum 48</FontFamily>
         <Style TargetType="Button" x:Key="Button_1">
-            <Setter Property="Background" Value="LightBlue"/>
-            <Setter Property="BorderBrush" Value="DarkBlue"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="Resource/Knopka.png">
+                    </ImageBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="FontFamily" Value="Resource/font/#Pixeleum 48"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style TargetType="Button" x:Key="Button_red">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="Resource/Knopka_2.png">
+                    </ImageBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="FontFamily" Value="Resource/font/#Pixeleum 48"/>
+        </Style>
+        <Style TargetType="Button" x:Key="Button_3">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush>
+                        <GradientStop Color="Blue" Offset="0"/>
+                        <GradientStop Color="LightSkyBlue" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Foreground" Value="LightGreen"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+        </Style>
+        <Style TargetType="Button" x:Key="Button_4">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush>
+                        <GradientStop Color="Blue" Offset="0"/>
+                        <GradientStop Color="LightSkyBlue" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontSize" Value="50"/>
+            <Setter Property="Foreground" Value="LightGreen"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+        </Style>
+        <Style TargetType="Button" x:Key="Button_5">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush>
+                        <GradientStop Color="Blue" Offset="0"/>
+                        <GradientStop Color="LightSkyBlue" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Foreground" Value="LightGreen"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
         </Style>
         <Style TargetType="Button" x:Key="Button_2">
             <Setter Property="Background" Value="DimGray"/>
@@ -18,8 +131,8 @@
                     <ControlTemplate TargetType="{x:Type TextBox}">
                         <Grid>
                             <Border Background="White" BorderBrush="#FF7D8683" BorderThickness="1"/>
-                            <ScrollViewer x:Name="PART_ContentHost" VerticalAlignment="Center" />
-                            <Label x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}" VerticalAlignment="Center"
+                            <ScrollViewer x:Name="PART_ContentHost"   />
+                            <Label x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}"  
                                Visibility="Collapsed" Foreground="Gray" FontSize="20" FontFamily="Arial"/>
                         </Grid>
                         <ControlTemplate.Triggers>
@@ -49,7 +162,7 @@
                         BorderBrush="DarkGray" 
                         CornerRadius="3" 
                         Background="{TemplateBinding Background}">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center"   />
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
@@ -60,12 +173,77 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <Style TargetType="TextBlock" x:Key="Title">
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="FontSize" Value="13pt"/>
+
+        <Style TargetType="TextBlock" x:Key="TB">
             <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Margin" Value="15"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="Resource/fon_111.png">
+                    </ImageBrush>
+                </Setter.Value>
+            </Setter>
         </Style>
+
+        <Style TargetType="TextBlock" x:Key="TB_His">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="Opacity" Value="0.9"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="TextAlignment" Value="Left"/>
+            <Setter Property="Foreground" Value="Yellow"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="Resource/fon_Hist.png">
+                    </ImageBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="TB_IT">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="Opacity" Value="0.9"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="TextAlignment" Value="Left"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="Resource/fon_IT.png">
+                    </ImageBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="TB_peple">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="Opacity" Value="0.9"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="TextAlignment" Value="Left"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="Resource/fon_Peple.png">
+                    </ImageBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="TB_kot">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="Opacity" Value="0.9"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="TextAlignment" Value="Left"/>
+            <Setter Property="Foreground" Value="Aqua"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="Resource/fon_111.png">
+                    </ImageBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
         <Style TargetType="Button" x:Key="ButtonG">
             <Setter Property="Height" Value="50"/>
             <Setter Property="Width" Value="100"/>
@@ -86,6 +264,11 @@
             <Setter Property="FontWeight" Value="Bold"/>
         </Style>
         <Style TargetType="TextBox" x:Key="TextBox">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="TextBlock">
             <Setter Property="Height" Value="30"/>
             <Setter Property="Width" Value="300"/>
             <Setter Property="Margin" Value="5"/>

@@ -5,15 +5,44 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ProfGames.PageSVoprosami"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="700" d:DesignWidth="1100"
       Title="dialog_1" Background="White">
     <Grid>
+        <Image Source="/Resource/fon_d.jpg"  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="30" Width="2000" Height="2000" Grid.RowSpan="30"/>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Label Content="Напишите название команды 1"/>
-            <TextBox x:Name="komanda_1" Width="165" Text="" Height="30"></TextBox>
-            <Label Content="Напишите название команды 2"/>
-            <TextBox x:Name="komanda_2" Width="165" Text="" Height="30"></TextBox>
-            <Button x:Name="nazvati" Click="nazvati_Click" Width="165" Content="Назвать" Margin="0,10,1,1" Height="30"></Button>
+            <TextBlock Text="Напишите название команды 1" FontFamily="{StaticResource pix}" FontSize="48" Margin="20,20,20,20" Foreground="Red">
+                <TextBlock.Effect>
+                    <DropShadowEffect
+      ShadowDepth="4"
+      Direction="330"
+      Color="Black"
+      Opacity="1"
+     BlurRadius="4"/>
+                </TextBlock.Effect>
+            </TextBlock>
+            <TextBox x:Name="komanda_1" Width="365" Text="" Height="80" FontFamily="{StaticResource pix}" FontSize="30" Style="{StaticResource roundcornerTextboxwithbordereffect}"></TextBox>
+            <TextBlock Text="Напишите название команды 2" FontFamily="{StaticResource pix}" FontSize="48" Foreground="Red"  Margin="20,20,20,20">
+                <TextBlock.Effect>
+                    <DropShadowEffect
+      ShadowDepth="4"
+      Direction="330"
+      Color="Black"
+      Opacity="1"
+     BlurRadius="4"/>
+                </TextBlock.Effect>
+            </TextBlock>
+            <TextBox x:Name="komanda_2" Width="365" Height="80" Text="" FontFamily="{StaticResource pix}" FontSize="30" Style="{StaticResource roundcornerTextboxwithbordereffect}"></TextBox>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                <Button x:Name="nazvati" Click="nazvati_Click" Height="100" Width="100" Margin="20,20,20,20" Style="{StaticResource MyButtonStyle}">
+                    <Image Source="/Resource/play.png"/>
+                </Button>
+                <Button x:Name="dobaviti" Click="dobaviti_Click" Height="100" Margin="20,20,20,20" Width="100" Style="{StaticResource MyButtonStyle}">
+                    <Image Source="/Resource/plys.png"/>
+                </Button>
+                <Button x:Name="nazad" Click="nazad_Click"  Height="100" Margin="20,20,20,20" Width="100" Style="{StaticResource MyButtonStyle}">
+                    <Image Source="/Resource/nazad.png"/>
+                </Button>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>
