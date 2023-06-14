@@ -34,7 +34,7 @@
         <Image Source="/Resource/fon_it.jpg"  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="30" Width="2000" Height="2000" Grid.RowSpan="30"/>
         <DataGrid x:Name="Vopros" AutoGenerateColumns="False" Grid.Row="1" Grid.Column="1" Grid.RowSpan="1"  Grid.ColumnSpan="3" IsEnabled="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Вопрос на 30 очков" Binding="{Binding Vopros_3}" Width="30*"  FontFamily="{StaticResource pix}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Вопрос на 30 очков" Binding="{Binding Vopros_3}" Width="30*" FontSize="25" FontFamily="{StaticResource pix}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
         <CheckBox x:Name="Chek_2" Grid.Column="1" Grid.Row="5" Grid.RowSpan="1" Grid.ColumnSpan="1">

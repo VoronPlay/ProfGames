@@ -45,31 +45,31 @@ namespace ProfGames.PageSVoprosami
             }
             if ((bool)Chek_3.IsChecked)
             {
-                Text_3.Background = Brushes.Red;
+                Text_3.Background = Brushes.Green;
+            }
+            if ((bool)Chek_4.IsChecked)
+            {
+                Text_4.Background = Brushes.Red;
                 K_0.Background = Brushes.Red;
                 K_0.Foreground = Brushes.Black;
                 K_0.Content = "0";
             }
-            if ((bool)Chek_4.IsChecked)
-            {
-                Text_4.Background = Brushes.Green;
-            }
 
             if ((bool)Chek_1.IsChecked)
             {
-                TOtvet.Foreground = Brushes.DodgerBlue;
+                TOtvet.Foreground = Brushes.White;
             }
             else if ((bool)Chek_2.IsChecked)
             {
-                TOtvet.Foreground = Brushes.DodgerBlue;
+                TOtvet.Foreground = Brushes.White;
             }
             else if ((bool)Chek_3.IsChecked)
             {
-                TOtvet.Foreground = Brushes.DodgerBlue;
+                TOtvet.Foreground = Brushes.White;
             }
             else if ((bool)Chek_4.IsChecked)
             {
-                TOtvet.Foreground = Brushes.DodgerBlue;
+                TOtvet.Foreground = Brushes.White;
             }
             else
             {

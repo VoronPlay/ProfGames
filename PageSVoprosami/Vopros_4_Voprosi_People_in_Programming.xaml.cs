@@ -62,19 +62,19 @@ namespace ProfGames.PageSVoprosami
 
             if ((bool)Chek_1.IsChecked)
             {
-                Totvet.Foreground = Brushes.DodgerBlue;
+                Totvet.Foreground = Brushes.White;
             }
             else if ((bool)Chek_2.IsChecked)
             {
-                Totvet.Foreground = Brushes.DodgerBlue;
+                Totvet.Foreground = Brushes.White;
             }
             else if ((bool)Chek_3.IsChecked)
             {
-                Totvet.Foreground = Brushes.DodgerBlue;
+                Totvet.Foreground = Brushes.White;
             }
             else if ((bool)Chek_4.IsChecked)
             {
-                Totvet.Foreground = Brushes.DodgerBlue;
+                Totvet.Foreground = Brushes.White;
             }
             else
             {

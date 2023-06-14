@@ -32,10 +32,8 @@ namespace ProfGames.PageSVoprosami_4_k
 
             if ((bool)Chek_1.IsChecked)
             {
-                Text_1.Background = Brushes.Red;
-                K_0.Background = Brushes.Red;
-                K_0.Foreground = Brushes.Black;
-                K_0.Content = "0";
+                Text_1.Background = Brushes.Green;
+                
             }
             if ((bool)Chek_2.IsChecked)
             {
@@ -53,7 +51,10 @@ namespace ProfGames.PageSVoprosami_4_k
             }
             if ((bool)Chek_4.IsChecked)
             {
-                Text_4.Background = Brushes.Green;
+                Text_4.Background = Brushes.Red;
+                K_0.Background = Brushes.Red;
+                K_0.Foreground = Brushes.Black;
+                K_0.Content = "0";
             }
 
             if ((bool)Chek_1.IsChecked)

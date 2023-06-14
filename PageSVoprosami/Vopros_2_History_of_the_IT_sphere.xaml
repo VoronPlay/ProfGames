@@ -33,7 +33,7 @@
         <Image Source="/Resource/history.jpg"  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="30" Width="2000" Height="2000" Grid.RowSpan="30"/>
         <DataGrid x:Name="Vopros" AutoGenerateColumns="False" Grid.Row="1" Grid.Column="1" Grid.RowSpan="1"  Grid.ColumnSpan="3" IsEnabled="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Вопрос на 20 очков" FontSize="20" Binding="{Binding Vopros_2}" FontFamily="{StaticResource pix}" Width="30*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Вопрос на 20 очков" FontSize="25" Binding="{Binding Vopros_2}" FontFamily="{StaticResource pix}" Width="30*"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
         <Button Grid.Column="3" x:Name="K_1" Click="K_1_Click" FontSize="26" Style="{StaticResource Button_1}" Grid.Row="3" Grid.RowSpan="1" Grid.ColumnSpan="1">

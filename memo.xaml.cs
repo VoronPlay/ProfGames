@@ -25,7 +25,7 @@ using Image = System.Windows.Controls.Image;
 
 namespace ProfGames
 {
-   
+
     /// <summary>
     /// Логика взаимодействия для memo.xaml
     /// </summary>
@@ -57,7 +57,6 @@ namespace ProfGames
             summ = cvn1 + 1;
             if_1_t.Text = summ.ToString();
             if_1.Content = "if";
-
             if (if_1_t.Text == "2")
             {
                 if (if_1.Content.ToString() == "if" && if_2.Content.ToString() == "if")
@@ -110,31 +109,40 @@ namespace ProfGames
                         Manager.MainFrame.Navigate(new StartPage());
 
                     }
+                    else
+                    {
+                        return;
+                    }
 
 
                 }
-                
                 else if (if_1.Background == Brushes.Transparent || if_2.Background == Brushes.Transparent)
                 {
-                   
-                    else_1.Content = "";
-                    else_2.Content = "";
-                    if_1_t.Text = "0";
+
+                        else_1.Content = "";
+                        else_2.Content = "";
+                        if_1_t.Text = "0";
+
                 }
                 else if (else_1.Background == Brushes.Transparent || else_2.Background == Brushes.Transparent)
                 {
+
                     if_1.Content = "";
-                    if_2.Content = "";
-                    if_1_t.Text = "0";
+                        if_2.Content = "";
+                        if_1_t.Text = "0";
+                    
                 }
                 else
                 {
+
                     else_1.Content = "";
-                    else_2.Content = "";
-                    if_1.Content = "";
-                    if_2.Content = "";
-                    if_1_t.Text = "0";
+                        else_2.Content = "";
+                        if_1.Content = "";
+                        if_2.Content = "";
+                        if_1_t.Text = "0";
+                    
                 }
+
 
             }
 
@@ -147,7 +155,6 @@ namespace ProfGames
             summ = cvn1 + 1;
             if_1_t.Text = summ.ToString();
             if_2.Content = "if";
-
             if (if_1_t.Text == "2")
             {
                 if (if_1.Content.ToString() == "if" && if_2.Content.ToString() == "if")
@@ -199,28 +206,38 @@ namespace ProfGames
                         Manager.MainFrame.Navigate(new StartPage());
 
                     }
+                    else
+                    {
+                        return;
+                    }
 
 
                 }
                 else if (if_1.Background == Brushes.Transparent || if_2.Background == Brushes.Transparent)
                 {
+
                     else_1.Content = "";
                     else_2.Content = "";
                     if_1_t.Text = "0";
+
                 }
                 else if (else_1.Background == Brushes.Transparent || else_2.Background == Brushes.Transparent)
                 {
+
                     if_1.Content = "";
                     if_2.Content = "";
                     if_1_t.Text = "0";
+
                 }
                 else
                 {
+
                     else_1.Content = "";
                     else_2.Content = "";
                     if_1.Content = "";
                     if_2.Content = "";
                     if_1_t.Text = "0";
+
                 }
             }
         }
@@ -232,7 +249,7 @@ namespace ProfGames
             summ = cvn1 + 1;
             if_1_t.Text = summ.ToString();
             else_1.Content = "else";
-
+            Task.Delay(1000);
             if (if_1_t.Text == "2")
             {
                 if (else_1.Content.ToString() == "else" && else_2.Content.ToString() == "else")
@@ -284,29 +301,41 @@ namespace ProfGames
                         Manager.MainFrame.Navigate(new StartPage());
 
                     }
+                    else
+                    {
+                        return;
+                    }
 
+
+                }
+
+                else if (if_1.Background == Brushes.Transparent || if_2.Background == Brushes.Transparent)
+                {
+
+                    else_1.Content = "";
+                    else_2.Content = "";
+                    if_1_t.Text = "0";
 
                 }
                 else if (else_1.Background == Brushes.Transparent || else_2.Background == Brushes.Transparent)
                 {
+
                     if_1.Content = "";
                     if_2.Content = "";
                     if_1_t.Text = "0";
-                }
-                else if (if_1.Background == Brushes.Transparent || if_2.Background == Brushes.Transparent)
-                {
-                    else_1.Content = "";
-                    else_2.Content = "";
-                    if_1_t.Text = "0";
+
                 }
                 else
                 {
+
                     else_1.Content = "";
                     else_2.Content = "";
                     if_1.Content = "";
                     if_2.Content = "";
                     if_1_t.Text = "0";
+
                 }
+
             }
         }
 
@@ -317,7 +346,6 @@ namespace ProfGames
             summ = cvn1 + 1;
             if_1_t.Text = summ.ToString();
             else_2.Content = "else";
-
             if (if_1_t.Text == "2")
             {
                 if (else_1.Content.ToString() == "else" && else_2.Content.ToString() == "else")
@@ -369,20 +397,28 @@ namespace ProfGames
                         Manager.MainFrame.Navigate(new StartPage());
 
                     }
+                    else
+                    {
+                        return;
+                    }
 
 
                 }
                 else if (if_1.Background == Brushes.Transparent || if_2.Background == Brushes.Transparent)
                 {
+
                     else_1.Content = "";
                     else_2.Content = "";
                     if_1_t.Text = "0";
+
                 }
                 else if (else_1.Background == Brushes.Transparent || else_2.Background == Brushes.Transparent)
                 {
+
                     if_1.Content = "";
                     if_2.Content = "";
                     if_1_t.Text = "0";
+
                 }
                 else
                 {
@@ -391,9 +427,12 @@ namespace ProfGames
                     if_1.Content = "";
                     if_2.Content = "";
                     if_1_t.Text = "0";
+
                 }
+
             }
-        }
+    }
+
 
 
 
